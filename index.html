@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ว30252 วิทยาศาสตร์กับภูมิปัญญา · ห้องเรียนออนไลน์</title>
+<meta name="description" content="แพลตฟอร์มเรียนออนไลน์ รายวิชา ว30252 วิทยาศาสตร์กับภูมิปัญญา ห้องวิทยาศาสตร์พลังสิบ โรงเรียนลองวิทยา">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect x='1' y='1' width='32' height='32' rx='9' fill='%23233A73'/%3E%3Cpath d='M17 7L27 17L17 27L7 17Z' fill='none' stroke='%23E2A42B' stroke-width='2'/%3E%3Cpath d='M17 12L22 17L17 22L12 17Z' fill='%23E2A42B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=Noto+Serif+Thai:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F6F3EC;--ink:#1A1F2E;--ink2:#2A2F3C;--muted:#5A5F6B;--line:#E2DDD2;--indigo:#233A73;--indigo-d:#172650;--night:#17244A;--sun:#E2A42B;--sun-t:#E9B44C;--sun-bg:#FBF1DC;--sun-fg:#7A4F00;--ok:#1E6B4F;--ok-bg:#E3F1EA;--ok-fg:#14513B;--bad:#9C2F24;--bad-bg:#F8E6E3;--tint:#EEF0F6;--sand:#F1ECE1}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Anuphan","Leelawadee UI","Tahoma",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo)}a:hover{color:var(--indigo-d)}
+p{text-wrap:pretty}
+.serif{font-family:"Noto Serif Thai","Tahoma",serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.jok{height:12px;background:repeating-linear-gradient(45deg,var(--sun) 0 5px,transparent 5px 10px),repeating-linear-gradient(-45deg,#B03A2E 0 5px,var(--night) 5px 10px)}
+.jok-thin{height:6px;background:repeating-linear-gradient(45deg,var(--sun) 0 3px,transparent 3px 6px),repeating-linear-gradient(-45deg,var(--indigo) 0 3px,var(--paper) 3px 6px)}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px}
+.btn{font:inherit;font-size:15px;font-weight:600;border:0;cursor:pointer;min-height:44px;padding:0 20px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:background .15s,transform .1s}
+.btn:active{transform:translateY(1px)}
+.btn-pri{background:var(--indigo);color:#fff}.btn-pri:hover{background:var(--indigo-d);color:#fff}
+.btn-pri:disabled{background:#9AA3BA;cursor:not-allowed}
+.btn-sun{background:var(--sun);color:var(--ink)}.btn-sun:hover{background:#EDB548;color:var(--ink)}
+.btn-ghost{background:#fff;color:var(--indigo);box-shadow:inset 0 0 0 1.5px #C9C2B2}.btn-ghost:hover{background:#ECE6D8}
+.btn-ghost:disabled{opacity:.45;cursor:not-allowed}
+.btn-light{background:transparent;color:var(--paper);box-shadow:inset 0 0 0 1.5px rgba(246,243,236,.45)}.btn-light:hover{background:rgba(246,243,236,.1);color:var(--paper)}
+.btn-ok{background:var(--ok-bg);color:var(--ok-fg)}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
+.chip{font-size:12.5px;padding:4px 10px;border-radius:999px;background:var(--tint);color:var(--indigo)}
+.chip.sun{background:var(--sun-bg);color:var(--sun-fg)}
+.eyebrow{font-size:13.5px;font-weight:600;color:#8A5A00;letter-spacing:.04em}
+.h2{margin:0;font-size:32px;line-height:1.35}
+.grid-auto{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:16px}
+.bar{height:6px;border-radius:99px;background:#E9E4D8;overflow:hidden}
+.bar>span{display:block;height:100%;border-radius:99px;transition:width .3s}
+/* header */
+.top{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding-top:10px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-height:44px}
+.brand b{display:block;font-size:16px}.brand small{display:block;font-size:12.5px;color:var(--muted)}
+.nav{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.navbtn{font:inherit;font-size:15px;border:0;cursor:pointer;min-height:44px;padding:0 14px;border-radius:999px;display:inline-flex;align-items:center;text-decoration:none;color:var(--ink2);background:transparent}
+.navbtn:hover{background:#ECE6D8;color:var(--ink2)}
+.navbtn.on{background:var(--indigo);color:#fff;font-weight:600}
+.me{font:inherit;display:flex;align-items:center;gap:8px;margin-left:6px;padding:6px 12px;min-height:40px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:13px;color:#3C4150;cursor:pointer}
+.me:hover{background:#FBF9F4}
+/* hero */
+.hero{background:var(--night);color:var(--paper)}
+.hero .wrap{display:flex;flex-wrap:wrap;gap:40px;align-items:center;padding-top:64px;padding-bottom:56px}
+.hero h1{margin:0;font-size:clamp(36px,5.2vw,60px);line-height:1.25}
+.pill{display:inline-flex;align-self:flex-start;font-size:13.5px;color:var(--sun-t);border:1px solid rgba(233,180,76,.45);border-radius:999px;padding:6px 14px}
+.prog-panel{background:rgba(246,243,236,.06);border:1px solid rgba(246,243,236,.18);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.step{padding:22px;display:flex;gap:14px;align-items:flex-start}
+.num{flex:none;width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
+/* unit */
+.uhead{background:var(--night);color:var(--paper)}
+.layout{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;padding-top:32px;padding-bottom:72px}
+.side{flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.main{flex:999 1 600px;min-width:0;display:flex;flex-direction:column;gap:22px}
+.side-label{font-size:12.5px;font-weight:700;color:var(--muted);letter-spacing:.05em;padding:0 12px 4px}
+.side-item{width:100%;text-align:left;min-height:44px;padding:8px 12px;border-radius:10px;display:flex;align-items:center;gap:10px;font-size:14.5px;line-height:1.45;text-decoration:none;color:var(--ink2)}
+.side-item:hover{background:var(--sand);color:var(--ink2)}
+.side-item.on{background:#fff;box-shadow:inset 0 0 0 1.5px var(--indigo);color:var(--indigo-d);font-weight:600}
+.side-item small{display:block;font-size:12px;color:var(--muted);font-weight:400}
+.dot{flex:none;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:inset 0 0 0 1.5px #B9B2A2}
+.dot.done{background:var(--ok);box-shadow:none}
+.kind{font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px}
+.content{padding:28px;display:flex;flex-direction:column;gap:18px}
+.content h3{margin:10px 0 0;font-size:21px;line-height:1.45;color:var(--indigo-d)}
+.content p{margin:0;font-size:16px;line-height:1.8;color:var(--ink2)}
+.content ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;font-size:15.5px;line-height:1.7;color:var(--ink2)}
+.sec{display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}
+.sec span{font-size:13px;font-weight:700;color:#fff;background:var(--indigo);border-radius:8px;padding:5px 12px}
+.sec strong{font-size:17px}
+.note{background:var(--tint);border-radius:12px;padding:16px 18px;font-size:15.5px;line-height:1.75;color:var(--indigo-d)}
+.formula{align-self:flex-start;background:var(--night);color:var(--paper);border-radius:10px;padding:12px 16px;font-size:15.5px;line-height:1.6}
+.formula b{color:var(--sun-t);font-weight:600}
+.warn{display:flex;gap:12px;align-items:flex-start;background:var(--sun-bg);border-radius:12px;padding:14px 16px;font-size:14.5px;line-height:1.6;color:#4A3300}
+.tbl-box{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
+.tr{display:grid;font-size:14.5px;line-height:1.6;border-top:1px solid #EEEAE0}
+.tr.th{background:var(--tint);color:var(--indigo-d);font-weight:600;border-top:0;border-bottom:1px solid #D8DCE8}
+.th+.tr{border-top:0}
+.td{padding:10px 12px;min-width:0;overflow-wrap:anywhere}
+.td.lab{font-weight:600;color:var(--indigo-d);background:#FBF9F4}
+.td.in{padding:8px}
+.inp{font:inherit;font-size:15px;width:100%;min-width:0;border:1px solid #CFC8B8;border-radius:8px;padding:8px 10px;background:#FDFCF9;color:var(--ink);resize:vertical;line-height:1.5}
+.inp:focus{outline:2px solid var(--indigo);outline-offset:1px;border-color:var(--indigo);background:#fff}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:15px;font-weight:600;line-height:1.6}
+.checks{display:flex;flex-direction:column;gap:2px;background:#FBF9F4;border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.chk{font:inherit;text-align:left;cursor:pointer;border:0;background:transparent;min-height:44px;display:flex;gap:12px;align-items:center;font-size:15px;padding:4px 0;color:var(--ink)}
+.box{flex:none;width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:inset 0 0 0 1.5px #B9B2A2}
+.box.on{background:var(--ok);box-shadow:none}
+.seg-wrap{display:flex;flex-wrap:wrap;gap:4px;background:var(--sand);padding:4px;border-radius:10px;align-self:flex-start}
+.seg{font:inherit;font-size:14px;border:0;cursor:pointer;min-height:40px;padding:0 14px;border-radius:8px;background:transparent;color:#3C4150}
+.seg.on{background:#fff;color:var(--indigo-d);font-weight:600;box-shadow:0 1px 2px rgba(23,36,74,.15)}
+.sendbar{padding:20px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.status{font-size:14px;color:var(--muted);line-height:1.6}
+.status.ok{color:var(--ok-fg)}.status.bad{color:var(--bad)}
+/* quiz */
+.q{padding:24px 26px;display:flex;flex-direction:column;gap:14px}
+.qno{flex:none;min-width:36px;height:36px;border-radius:10px;background:var(--tint);color:var(--indigo);font-weight:700;display:flex;align-items:center;justify-content:center}
+.opt{font:inherit;width:100%;text-align:left;cursor:pointer;min-height:48px;padding:10px 14px;border-radius:12px;display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5;background:#fff;border:1.5px solid #DDD7CA;color:var(--ink)}
+.opt:hover:not(:disabled){border-color:#9AA3BA}
+.opt:disabled{cursor:default}
+.opt .l{flex:none;width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;background:var(--sand);color:#3C4150}
+.opt.sel{background:var(--tint);border-color:var(--indigo)}.opt.sel .l{background:var(--indigo);color:#fff}
+.opt.right{background:var(--ok-bg);border-color:var(--ok)}.opt.right .l{background:var(--ok);color:#fff}
+.opt.wrong{background:var(--bad-bg);border-color:var(--bad)}.opt.wrong .l{background:var(--bad);color:#fff}
+.opt .tag{flex:none;font-size:12px;font-weight:700;padding-top:4px}
+.ex{border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.7}
+.ex.ok{background:var(--ok-bg);color:var(--ok-fg)}.ex.no{background:var(--sun-bg);color:#4A3300}
+.ring{width:86px;height:86px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ring>div{width:70px;height:70px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
+/* footer, dialog, toast */
+.foot{margin-top:auto;background:var(--night);color:#C3C9DB}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px;padding-bottom:28px;font-size:13.5px;line-height:1.7}
+dialog{border:0;border-radius:18px;padding:0;width:min(480px,calc(100% - 32px));color:var(--ink);box-shadow:0 20px 60px rgba(23,36,74,.3)}
+dialog::backdrop{background:rgba(23,36,74,.45)}
+.dlg{padding:26px;display:flex;flex-direction:column;gap:14px}
+.dlg label{font-size:14px;font-weight:600;display:flex;flex-direction:column;gap:6px}
+.dlg input{font:inherit;font-size:15px;min-height:44px;border:1px solid #CFC8B8;border-radius:8px;padding:8px 12px;background:#FDFCF9}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;font-size:14.5px;opacity:0;pointer-events:none;transition:all .25s;max-width:calc(100% - 32px);z-index:50}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+#app{min-height:100vh;display:flex;flex-direction:column}
+@media (max-width:900px){.side{order:2}}
+@media (max-width:700px){.top{position:static}.me{margin-left:0}}
+@media (max-width:640px){.hero .wrap{padding-top:44px}.content{padding:20px}.q{padding:20px}.h2{font-size:26px}}
+@media print{
+  .top,.side,.foot,.uhead .jok,.noprint,#toast{display:none!important}
+  body{background:#fff}.uhead{background:#fff;color:#000}.uhead *{color:#000!important}
+  .layout{padding:0}.card{border:0}.content{padding:0}
+  .tbl-box{overflow:visible}.tr{break-inside:avoid}
+  .inp{border:1px solid #999;resize:none;background:#fff}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<dialog id="prof" aria-labelledby="profTitle">
+<form class="dlg" method="dialog" id="profForm">
+<strong id="profTitle" class="serif" style="font-size:22px">ข้อมูลนักเรียน</strong>
+<span style="font-size:14px;color:var(--muted);line-height:1.6">ใช้แนบไปกับใบงานและคะแนนที่ส่งให้ครู กรอกครั้งเดียว ระบบจำไว้ในเครื่องนี้</span>
+<label>ชื่อ–นามสกุล<input name="name" required autocomplete="name"></label>
+<div class="row2">
+<label>ชั้น<input name="room" required placeholder="เช่น ม.4/1"></label>
+<label>เลขที่<input name="no" required inputmode="numeric"></label>
+</div>
+<label>กลุ่ม / ทีม<input name="group" placeholder="เช่น กลุ่ม 2 (ไม่บังคับ)"></label>
+<div style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;padding-top:6px">
+<button type="button" class="btn btn-ghost" id="profCancel">ยกเลิก</button>
+<button type="submit" class="btn btn-pri">บันทึก</button>
+</div>
+</form>
+</dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+
+/* ===== เนื้อหารายวิชา (แก้ไขเนื้อหาได้ที่ส่วนนี้) ===== */
+function P(text, lead) { return { t: 'p', text: text, lead: lead || '' }; }
+function H(text) { return { t: 'h', text: text }; }
+function S(tag, text) { return { t: 's', tag: tag, text: text }; }
+function N(text, lead) { return { t: 'note', text: text, lead: lead || '' }; }
+function X(text, lead) { return { t: 'x', text: text, lead: lead || '' }; }
+function L(items) { return { t: 'list', items: items }; }
+function T(head, rows) { return { t: 'table', head: head, rows: rows }; }
+function G(head, rows) { return { t: 'table', head: head, rows: rows, grid: true }; }
+function F(label, rows, ph) { return { t: 'field', label: label, rows: rows || 3, ph: ph || 'พิมพ์คำตอบของกลุ่ม/ของฉัน' }; }
+function K(label, items) { return { t: 'check', label: label, items: items }; }
+function rowsOf(labels, inputs) { return labels.map(function (l) { var r = [l]; for (var i = 0; i < inputs; i++) r.push(null); return r; }); }
+function nums(n, inputs) { var a = []; for (var i = 1; i <= n; i++) a.push(String(i)); return rowsOf(a, inputs); }
+
+function COURSE() {
+  var SRC = ['ไม้ไผ่', 'Eco Printing', 'ขนมจีนน้ำย้อย', 'ผ้าซิ่นตีนจก'];
+  var units = [
+  {
+    id: 'u1', no: 1, title: 'รากเหง้าชุมชนลอง', hours: 4, periods: 'คาบที่ 1–4', weight: '10% ของรายวิชา',
+    short: 'ฝึกใช้ Timeline 2 ชนิดย้อนดูที่มาของภูมิปัญญา และตั้งคำถามวิทยาศาสตร์ที่คมพอจะพาเราลงพื้นที่',
+    items: [
+      { id: 'u1o', kind: 'o', code: 'ภาพรวม', title: 'เป้าหมายและแผนการเรียน', meta: 'อ่านก่อนเริ่มหน่วย', blocks: [
+        P('หน่วยนี้คือการ “ปูพื้นก่อนลงพื้นที่” เราจะทำความรู้จักว่าภูมิปัญญาทั้ง 4 แหล่งมีที่มาจากชุมชนลองอย่างไร แล้วเตรียมคำถามให้พร้อมสำหรับการไปพบปราชญ์ในหน่วยที่ 2'),
+        N('“ภูมิปัญญาที่อยู่รอดมาถึงวันนี้ ผ่านการทดลองของคนรุ่นก่อนมาแล้วกี่รอบ และเราจะพิสูจน์ด้วยวิทยาศาสตร์ได้อย่างไร”', 'คำถามหลักของหน่วย: '),
+        H('เมื่อจบหน่วย ฉันจะสามารถ'),
+        L(['อธิบายประวัติความเป็นมาและบริบทของชุมชนอำเภอลองโดยใช้ Timeline พัฒนาการได้', 'ใช้ Timeline กระบวนการวางแผนการเก็บข้อมูลก่อนลงพื้นที่ได้', 'ตั้งคำถามทางวิทยาศาสตร์ที่ตรวจสอบได้เกี่ยวกับภูมิปัญญาท้องถิ่นได้', 'แสดงความเคารพและเห็นคุณค่าของภูมิปัญญาและผู้สืบทอดภูมิปัญญาในชุมชน']),
+        H('กลุ่มและแหล่งภูมิปัญญาที่รับผิดชอบ'),
+        P('ห้องแบ่งเป็น 4 กลุ่ม แต่ละกลุ่มเป็น “กลุ่มเจ้าภาพ” ของ 1 แหล่ง แต่ทุกกลุ่มยังได้ไปครบทั้ง 4 แหล่งในหน่วยที่ 2'),
+        T(['กลุ่ม', 'แหล่งภูมิปัญญา', 'ศาสตร์ที่เด่น'], [['1', 'ผ้าซิ่นตีนจก', 'ฟิสิกส์แสงและสี · Static Model'], ['2', 'Eco Printing กลุ่มแม่บ้านบ้านแม่ลาน', 'เคมีพืช · Linear Model'], ['3', 'ขนมจีนน้ำย้อยบ้านแม่ลาน', 'ชีววิทยาการหมัก · Stochastic Model'], ['4', 'ไม้เสียบลูกชิ้น / ตะเกียบจากไม้ไผ่', 'สมบัติวัสดุ · Static Model']]),
+        H('แผนการเรียน 4 คาบ'),
+        T(['คาบ', 'ชื่อคาบ', 'สิ่งที่เราจะทำ', 'ใช้'], [['1', 'ปริศนาของ 4 สิ่งในลอง', 'สังเกตของจริง 4 ชิ้น รู้จักภูมิปัญญากับวิทยาศาสตร์ แบ่งกลุ่ม รับการบ้านสัมภาษณ์คนในบ้าน', 'ใบความรู้ 1.1 · ใบงาน 1.1, 1.2'], ['2', 'ย้อนเวลาชุมชนลอง', 'รวมข้อมูลสัมภาษณ์เป็น Timeline ใหญ่ของห้อง แล้วทำ Timeline พัฒนาการของแหล่งตัวเอง', 'ใบความรู้ 1.2 · ใบงาน 1.3'], ['3', 'แกะกระบวนการ หาตัวแปร', 'ฝึก Timeline กระบวนการกับการหุงข้าว แล้วคาดการณ์กระบวนการของแหล่งตัวเอง', 'ใบงาน 1.4'], ['4', 'คำถามที่พาเราลงพื้นที่', 'ยกระดับคำถาม วางแผนเก็บข้อมูล และ Gallery Walk ให้ Feedback', 'ใบความรู้ 1.3 · ใบงาน 1.5']]),
+        H('ชิ้นงานและคะแนน'),
+        T(['ชิ้นงาน', 'ใบงาน', 'คะแนน'], [['Timeline พัฒนาการของแหล่งภูมิปัญญา', '1.3', '4'], ['Timeline กระบวนการ (ฉบับคาดการณ์)', '1.4', '3'], ['คำถามวิทยาศาสตร์ + แผนเก็บข้อมูลก่อนลงพื้นที่', '1.5', '3'], ['ใบงาน 1.1 และ 1.2', '1.1, 1.2', 'ไม่คิดคะแนน (ตรวจความครบถ้วน)']])
+      ] },
+      { id: 'u1k1', kind: 'k', code: 'ใบความรู้ 1.1', title: 'ภูมิปัญญาคือการทดลองที่ใช้เวลาหลายร้อยปี', meta: 'ใช้ในคาบที่ 1', blocks: [
+        P('คือความรู้ที่คนในชุมชนค้นพบจากการลงมือทำ สังเกตผล แล้วปรับปรุงต่อกันมาหลายรุ่น วิธีที่ไม่ได้ผลถูกเลิกใช้ วิธีที่ได้ผลถูกสอนต่อให้ลูกหลาน', 'ภูมิปัญญาท้องถิ่น '),
+        P('ลองคิดดู: กว่าจะรู้ว่าต้องหมักข้าวกี่วันขนมจีนถึงจะอร่อย คนรุ่นก่อนต้องลองหมักกี่ครั้ง ลองกี่ปี นั่นคือการทดลองจริง เพียงแต่ไม่มีใครจดตัวเลขไว้'),
+        X('ส่วนวิทยาศาสตร์ถามต่อว่า “ทำไม” และ “เท่าไร”', 'ภูมิปัญญาตอบว่า “ทำอย่างไร” '),
+        T(['', 'ภูมิปัญญาท้องถิ่น', 'วิทยาศาสตร์'], [['คำถาม', 'ทำอย่างไรให้ได้ผล', 'ทำไมได้ผล และได้ผลเท่าไร'], ['วิธีหาคำตอบ', 'ลองทำ สังเกต จำ', 'ตั้งสมมติฐาน ทดลอง วัด'], ['เก็บความรู้ไว้ที่', 'ตัวคน คำบอกเล่า ฝีมือ', 'ตัวเลข กราฟ รายงาน']]),
+        N('เรามาเป็น “ล่าม” แปลภูมิปัญญาเป็นภาษาวิทยาศาสตร์ เพื่อให้ความรู้นี้อยู่รอดและพัฒนาต่อได้', 'เราไม่ได้มาตัดสินว่าภูมิปัญญาถูกหรือผิด '),
+        H('ภูมิปัญญา 4 แหล่งที่เราจะไปเรียนรู้เทอมนี้'),
+        L(['ผ้าซิ่นตีนจก', 'Eco Printing กลุ่มแม่บ้านบ้านแม่ลาน', 'ขนมจีนน้ำย้อยบ้านแม่ลาน', 'ไม้เสียบลูกชิ้นและตะเกียบจากไม้ไผ่']),
+        H('ลองแยกคำถาม'),
+        P('ข้อไหนเป็นคำถาม “อย่างไร” (H) ข้อไหนเป็นคำถาม “ทำไม” (W) คิดคำตอบไว้ แล้วไปตรวจกับแบบทดสอบหลังเรียน'),
+        L(['ทอผ้าตีนจก 1 ผืนใช้เวลากี่วัน', 'ทำไมใบสักพิมพ์ติดผ้าได้ชัดกว่าใบมะม่วง', 'ไม้ไผ่ต้องตากแดดกี่วัน', 'ทำไมข้าวที่หมักแล้วจึงโม่ง่ายกว่าข้าวที่ไม่หมัก'])
+      ] },
+      { id: 'u1k2', kind: 'k', code: 'ใบความรู้ 1.2', title: 'Timeline 2 ชนิด เครื่องมือย้อนเวลาของวิศวกรสังคม', meta: 'ใช้ในคาบที่ 2 และ 3', blocks: [
+        P('เทอม 1 เราใช้ฟ้าประทานและนาฬิกาชีวิตมองสิ่งที่เกิดขึ้น “ตอนนี้” เทอมนี้เราต้องมองย้อนกลับไป จึงต้องใช้เครื่องมือใหม่ 2 ชนิด'),
+        H('Timeline พัฒนาการ — ภูมิปัญญานี้เดินทางมาอย่างไร'),
+        P('เส้นเวลาที่แสดงว่าภูมิปัญญาเปลี่ยนไปอย่างไรในแต่ละยุค มี 4 ชั้น'),
+        L([['ช่วงเวลา — ', 'ใช้รุ่นคนแทนปีได้ เช่น รุ่นทวด รุ่นปู่ย่า รุ่นพ่อแม่ รุ่นเรา'], ['เกิดอะไรขึ้น — ', 'เช่น เริ่มมีเครื่องจักร เปลี่ยนวัตถุดิบ คนทำน้อยลง'], ['ทำไมจึงเกิด — ', 'เศรษฐกิจ เทคโนโลยี วัตถุดิบ ความนิยม'], ['ส่งผลต่อภูมิปัญญาอย่างไร — ', 'แข็งแรงขึ้น อ่อนลง หรือปรับตัว']]),
+        N('“ยืนยันแล้ว” (มีคนหรือเอกสารยืนยันอย่างน้อย 2 แหล่ง) หรือ “ต้องถามเพิ่ม” เพราะข้อมูลคำบอกเล่ามักคลาดเคลื่อนเรื่องปี', 'ทุกเหตุการณ์ให้ติดป้าย '),
+        H('Timeline กระบวนการ — ภูมิปัญญานี้ทำอย่างไรทีละขั้น'),
+        P('แตกการผลิตตั้งแต่วัตถุดิบจนเป็นของสำเร็จ แต่ละขั้นตอบ 5 คำถาม'),
+        T(['ช่อง', 'ถามตัวเองว่า', 'ตัวอย่าง: การหุงข้าว'], [['สิ่งที่ใส่เข้า', 'ใช้วัตถุดิบ พลังงาน หรือแรงงานอะไร', 'ข้าวสาร น้ำ ไฟ'], ['การกระทำ', 'ทำอะไรกับมัน', 'ซาวข้าว ตั้งไฟ'], ['เงื่อนไข', 'นานเท่าไร ร้อนเท่าไร มากเท่าไร', 'น้ำ : ข้าว ประมาณ 1.5 : 1 เดือดประมาณ 100 °C'], ['สิ่งที่เปลี่ยน', 'เปลี่ยนรูปร่าง เปลี่ยนเป็นสารใหม่ หรือมีสิ่งมีชีวิตเกี่ยวข้อง', 'เมล็ดดูดน้ำ แป้งสุกเป็นเจล'], ['ตัวแปรที่วัดได้', 'อะไรวัดเป็นตัวเลขได้', 'มวลข้าวก่อน–หลัง เวลาหุง']]),
+        N('ช่อง “ตัวแปรที่วัดได้” คือขั้น Select ของ Mathematical Modelling ที่เราเรียนมาแล้วในเทอม 1', 'เคล็ดลับ: ')
+      ] },
+      { id: 'u1k3', kind: 'k', code: 'ใบความรู้ 1.3', title: 'บันไดคำถาม 3 ขั้น', meta: 'ใช้ในคาบที่ 4', blocks: [
+        P('คำถามดีพาเราไปพบสิ่งใหม่ คำถามที่ดีที่สุดสำหรับนักวิทยาศาสตร์คือคำถามที่ทดลองและวัดได้'),
+        T(['ขั้น', 'ชนิด', 'ตัวอย่าง (Eco Printing)', 'หาคำตอบโดย'], [['1', 'อะไร / อย่างไร', 'นึ่งผ้านานกี่นาที', 'ถามปราชญ์'], ['2', 'ทำไม', 'ทำไมต้องนึ่ง ไม่ใช่ต้ม', 'ค้นหลักการวิทยาศาสตร์'], ['3', 'ถ้า...แล้ว...', 'ถ้าเวลานึ่งเพิ่มขึ้น ความเข้มของสีบนผ้าจะเพิ่มขึ้นหรือไม่', 'ทดลองและวัด']]),
+        H('คำถามขั้น 3 ที่ดีต้องผ่าน 4 ข้อ'),
+        L(['มีตัวแปรต้น (สิ่งที่เราเปลี่ยน) ชัดเจน', 'มีตัวแปรตาม (สิ่งที่เราวัด) ที่วัดเป็นตัวเลขได้', 'ทำได้ด้วยเครื่องมือที่โรงเรียนมี ภายในเวลา 1 ภาคเรียน', 'ถ้าได้คำตอบ ผู้สืบทอดภูมิปัญญาได้ประโยชน์']),
+        X('ถ้า [ตัวแปรต้น] เปลี่ยนไป [ตัวแปรตาม] จะเปลี่ยนไปอย่างไร', 'สูตรช่วยเขียน  ')
+      ] },
+      { id: 'u1w1', kind: 'w', code: 'ใบงาน 1.1', title: 'ปริศนาของ 4 สิ่งในลอง', meta: 'รายบุคคล · คาบที่ 1 · ไม่คิดคะแนน', intro: 'เวียนดูของจริงให้ครบ 4 ฐาน ฐานละ 3 นาทีครึ่ง ใช้ตา มือ จมูก (ห้ามชิมถ้าครูไม่อนุญาต) บันทึกสิ่งที่สังเกตได้ 3 อย่าง และคำถาม 1 ข้อ แล้วเขียน H (อย่างไร) หรือ W (ทำไม) กำกับคำถาม', blocks: [
+        G(['ฐาน', 'สิ่งที่สังเกตได้ 3 อย่าง', 'คำถามของฉัน', 'H / W'], rowsOf(['ผ้าซิ่นตีนจก', 'ผ้า Eco Printing', 'ขนมจีน', 'ตะเกียบ / ไม้เสียบไม้ไผ่'], 3)),
+        F('Exit Ticket: สิ่งที่ฉันอยากรู้ที่สุดเกี่ยวกับแหล่งภูมิปัญญาของกลุ่มฉันคือ...', 2)
+      ] },
+      { id: 'u1w2', kind: 'w', code: 'ใบงาน 1.2', title: 'สัมภาษณ์คลังความรู้ในบ้าน', meta: 'รายบุคคล · การบ้านหลังคาบที่ 1 · ไม่คิดคะแนน', intro: 'สัมภาษณ์ผู้สูงอายุในบ้านหรือคนที่อยู่อำเภอลองมานาน เกี่ยวกับชุมชนและแหล่งภูมิปัญญาของกลุ่ม', blocks: [
+        N('ขออนุญาตก่อนถาม ถ้าจะอัดเสียงต้องขออนุญาตก่อน ฟังให้จบก่อนถามข้อต่อไป และขอบคุณเมื่อจบ', 'ก่อนเริ่ม: '),
+        F('ผู้ให้ข้อมูล (ชื่อหรือความสัมพันธ์ เช่น คุณยาย) อายุประมาณ และอยู่อำเภอลองมาประมาณกี่ปี', 2),
+        G(['ข้อ', 'คำถาม', 'คำตอบ'], [['1', 'ตอนที่ท่านเป็นเด็ก อำเภอลองเป็นอย่างไร มีอะไรที่ตอนนี้ไม่มีแล้วบ้าง', null], ['2', 'มีอะไรที่ตอนนี้มีแล้ว แต่สมัยก่อนไม่มี (ถนน ไฟฟ้า ตลาด เครื่องจักร ฯลฯ) เริ่มมีตอนท่านอายุประมาณเท่าไร', null], ['3', 'ท่านรู้จัก [แหล่งภูมิปัญญาของกลุ่ม] ไหม เคยเห็นหรือเคยทำไหม', null], ['4', 'สมัยก่อนกับสมัยนี้ [แหล่งภูมิปัญญาของกลุ่ม] ทำต่างกันอย่างไร', null], ['5', 'ทำไมท่านคิดว่ามันเปลี่ยนไป', null], ['6', '(คำถามของฉันเอง)', null]]),
+        S('สรุป', 'เหตุการณ์ที่ได้จากการสัมภาษณ์ 2–3 เหตุการณ์ (นำไปติดผนังคาบที่ 2)'),
+        G(['ที่', 'เหตุการณ์', 'เกิดในรุ่นไหน (ทวด / ปู่ย่าตอนหนุ่มสาว / พ่อแม่ / รุ่นเรา)'], nums(3, 2))
+      ] },
+      { id: 'u1w3', kind: 'w', code: 'ใบงาน 1.3', title: 'Timeline พัฒนาการ', meta: 'กลุ่ม · คาบที่ 2 · 4 คะแนน', intro: 'รวมข้อมูลจากใบงาน 1.2 ของทุกคนและการค้นข้อมูล เติมอย่างน้อย 1 เหตุการณ์ต่อช่วงเวลา ติดป้าย ✓ ยืนยันแล้ว หรือ ? ต้องถามเพิ่ม ทุกเหตุการณ์', blocks: [
+        F('สมาชิกและบทบาท (หัวหน้ากลุ่ม · ผู้บันทึก · ผู้ถาม · ผู้ประสานงาน/ถ่ายภาพ)', 2),
+        G(['ช่วงเวลา', 'เกิดอะไรขึ้น', 'ทำไมจึงเกิด', 'ผลต่อภูมิปัญญา (แข็งแรงขึ้น / อ่อนลง / ปรับตัว)', '✓ หรือ ?', 'แหล่งข้อมูล'], rowsOf(['รุ่นทวด–ปู่ย่า (มากกว่า 60 ปีก่อน)', 'รุ่นปู่ย่าตอนหนุ่มสาว (30–60 ปีก่อน)', 'รุ่นพ่อแม่ (10–30 ปีก่อน)', 'รุ่นเรา (10 ปีล่าสุด)', 'อีก 10 ปีข้างหน้า (คาดการณ์)'], 5)),
+        F('จุดเปลี่ยนที่สำคัญที่สุดของภูมิปัญญาเราคือ... เพราะ...', 3)
+      ] },
+      { id: 'u1w4', kind: 'w', code: 'ใบงาน 1.4', title: 'Timeline กระบวนการ ฉบับคาดการณ์', meta: 'กลุ่ม · คาบที่ 3 · 3 คะแนน', intro: 'คาดการณ์ขั้นตอนการผลิตตั้งแต่วัตถุดิบจนเป็นของสำเร็จ อย่างน้อย 5 ขั้น เดาได้แต่ต้องมีเหตุผล ใส่ ? หน้าขั้นที่กลุ่มไม่แน่ใจที่สุด (เราจะไปตรวจกับของจริงในหน่วยที่ 2)', blocks: [
+        F('ผลผลิตสุดท้ายของแหล่งเรา', 1),
+        G(['ขั้น', 'สิ่งที่ใส่เข้า', 'การกระทำ', 'เงื่อนไข (เวลา / อุณหภูมิ / ปริมาณ)', 'สิ่งที่เปลี่ยน (กายภาพ / เคมี / ชีวภาพ)', 'ตัวแปรที่วัดได้'], nums(7, 5)),
+        F('ปราชญ์รู้ได้อย่างไรว่าขั้นไหน “พอดีแล้ว” (ดูจากสี กลิ่น เสียง สัมผัส)', 3),
+        F('ตัวแปรที่กลุ่มสนใจที่สุด 1 ตัว', 1)
+      ] },
+      { id: 'u1w5', kind: 'w', code: 'ใบงาน 1.5', title: 'คำถามที่พาเราลงพื้นที่', meta: 'กลุ่ม · คาบที่ 4 · 3 คะแนน', intro: 'ยกระดับคำถามจากใบงาน 1.3 และ 1.4 ให้พร้อมใช้ในวันลงพื้นที่ แล้ววางแผนว่าใครทำอะไร', blocks: [
+        S('ตอนที่ 1', 'คำถามสำหรับปราชญ์ (ขั้น 1–2) อย่างน้อย 5 ข้อ'),
+        P('ดึงจากช่อง ? ในใบงาน 1.3 และ 1.4'),
+        G(['ข้อ', 'คำถาม', 'มาจาก (ใบงาน 1.3 / 1.4 / ใหม่)', 'ขั้น 1 หรือ 2'], nums(5, 3)),
+        S('ตอนที่ 2', 'คำถามที่ตรวจสอบได้ (ขั้น 3) อย่างน้อย 2 ข้อ'),
+        G(['ข้อ', 'ถ้า... (ตัวแปรต้น)', 'แล้ว... (ตัวแปรตาม)', 'วัดด้วยเครื่องมืออะไร', 'ใครได้ประโยชน์'], nums(2, 4)),
+        S('ตอนที่ 3', 'แผนเก็บข้อมูลวันลงพื้นที่'),
+        G(['สิ่งที่ต้องทำ', 'ผู้รับผิดชอบ', 'อุปกรณ์'], rowsOf(['ถามคำถามตอนที่ 1', 'จดคำตอบ', 'ถ่ายภาพ / วิดีโอแต่ละขั้นตอน (ขออนุญาตก่อน)', 'วัดหรือเก็บตัวอย่าง (ถ้าได้รับอนุญาต)', 'ตรวจขั้นตอนจริงเทียบกับใบงาน 1.4'], 2)),
+        F('ข้อเสนอแนะที่ได้จาก Gallery Walk และสิ่งที่กลุ่มปรับ', 3),
+        K('Self-check ก่อนส่ง', ['Timeline พัฒนาการมีครบทุกช่วงเวลา และติด ✓ หรือ ? ทุกเหตุการณ์', 'Timeline กระบวนการมีอย่างน้อย 5 ขั้น และมีตัวแปรที่วัดได้', 'มีคำถามสำหรับปราชญ์อย่างน้อย 5 ข้อ', 'มีคำถามขั้น 3 อย่างน้อย 2 ข้อ ที่ระบุตัวแปรต้นและตัวแปรตาม', 'ทุกคนในกลุ่มมีหน้าที่วันลงพื้นที่'])
+      ] },
+      { id: 'u1q', kind: 'q', code: 'ทดสอบหลังเรียน', title: 'หน่วยที่ 1 รากเหง้าชุมชนลอง', meta: '10 ข้อ · ส่งแล้วดูเฉลยได้ทันที', qs: [
+        { lv: 'เข้าใจ', q: 'ทำไมจึงเปรียบภูมิปัญญาท้องถิ่นว่าเป็น “การทดลองที่ใช้เวลาหลายร้อยปี”', o: ['มีการบันทึกตัวเลขผลการทดลองอย่างละเอียดทุกรุ่น', 'คนในชุมชนลองทำ สังเกตผล และปรับปรุงต่อกันหลายรุ่น วิธีที่ไม่ได้ผลถูกเลิกใช้', 'นักวิทยาศาสตร์เป็นผู้คิดค้นแล้วสอนให้ชาวบ้าน', 'ต้องใช้เครื่องมือในห้องปฏิบัติการทุกขั้นตอน'], a: 1, ex: 'ภูมิปัญญาเกิดจากการลงมือทำ สังเกต และปรับปรุงต่อเนื่อง เหมือนการทดลอง เพียงแต่ไม่มีใครจดตัวเลขไว้' },
+        { lv: 'เข้าใจ', q: 'ข้อใดเป็นคำถาม “ทำไม” (W)', o: ['ทอผ้าตีนจก 1 ผืนใช้เวลากี่วัน', 'ไม้ไผ่ต้องตากแดดกี่วัน', 'ทำไมใบสักพิมพ์ติดผ้าได้ชัดกว่าใบมะม่วง', 'นึ่งผ้านานกี่นาที'], a: 2, ex: 'คำถามนี้ต้องอธิบายด้วยสารในใบไม้ จึงเป็นคำถาม W ส่วนข้ออื่นถามข้อเท็จจริงหรือวิธีทำ (H) ปราชญ์ตอบได้ทันที' },
+        { lv: 'เข้าใจ', q: 'คำถาม “ทำไมข้าวที่หมักแล้วจึงโม่ง่ายกว่าข้าวที่ไม่หมัก” เป็นคำถามชนิดใด และเพราะอะไร', o: ['H เพราะถามวิธีทำ', 'W เพราะต้องอธิบายด้วยการเปลี่ยนแปลงของเนื้อข้าวระหว่างหมัก', 'H เพราะปราชญ์ตอบได้ทันที', 'W เพราะเป็นคำถามที่ทดลองไม่ได้'], a: 1, ex: 'เป็นคำถาม W ต้องใช้ความรู้ว่าเนื้อข้าวเปลี่ยนไปอย่างไรระหว่างหมักมาอธิบาย' },
+        { lv: 'จำ', q: 'ข้อใด “ไม่ใช่” ชั้นของ Timeline พัฒนาการ', o: ['ช่วงเวลา', 'ทำไมจึงเกิด', 'ส่งผลต่อภูมิปัญญาอย่างไร', 'ตัวแปรที่วัดได้'], a: 3, ex: '“ตัวแปรที่วัดได้” เป็นช่องของ Timeline กระบวนการ ส่วน Timeline พัฒนาการมี ช่วงเวลา · เกิดอะไรขึ้น · ทำไมจึงเกิด · ส่งผลต่อภูมิปัญญาอย่างไร' },
+        { lv: 'เข้าใจ', q: 'เหตุการณ์บน Timeline จะติดป้าย “ยืนยันแล้ว” ได้เมื่อใด', o: ['เมื่อมีคนหรือเอกสารยืนยันอย่างน้อย 2 แหล่ง', 'เมื่อหัวหน้ากลุ่มเห็นด้วย', 'เมื่อค้นเจอในอินเทอร์เน็ต 1 เว็บไซต์', 'เมื่อผู้สูงอายุในบ้านเล่าให้ฟัง'], a: 0, ex: 'ข้อมูลคำบอกเล่ามักคลาดเคลื่อนเรื่องปี จึงต้องมีอย่างน้อย 2 แหล่งยืนยัน ถ้ายังไม่ครบให้ติด “ต้องถามเพิ่ม”' },
+        { lv: 'นำไปใช้', q: 'ใน Timeline กระบวนการของการหุงข้าว “น้ำ : ข้าว ประมาณ 1.5 : 1” ควรอยู่ในช่องใด', o: ['สิ่งที่ใส่เข้า', 'การกระทำ', 'เงื่อนไข', 'สิ่งที่เปลี่ยน'], a: 2, ex: 'ช่อง “เงื่อนไข” บันทึกเวลา อุณหภูมิ และปริมาณ สัดส่วนน้ำต่อข้าวจึงเป็นเงื่อนไข' },
+        { lv: 'นำไปใช้', q: '“เมล็ดดูดน้ำ แป้งสุกเป็นเจล” ควรอยู่ในช่องใดของ Timeline กระบวนการ', o: ['สิ่งที่เปลี่ยน', 'ตัวแปรที่วัดได้', 'การกระทำ', 'สิ่งที่ใส่เข้า'], a: 0, ex: 'เป็นการเปลี่ยนแปลงที่เกิดกับวัตถุดิบ จึงอยู่ในช่อง “สิ่งที่เปลี่ยน”' },
+        { lv: 'วิเคราะห์', q: 'ข้อใดเป็นคำถามขั้น 3 (ตรวจสอบได้ด้วยการทดลอง) มากที่สุด', o: ['ขนมจีนน้ำย้อยเริ่มทำตั้งแต่เมื่อไร', 'ทำไมคนลองชอบกินขนมจีน', 'ถ้าจำนวนวันหมักเพิ่มขึ้น pH ของน้ำหมักจะเปลี่ยนไปอย่างไร', 'ใครเป็นผู้คิดสูตรขนมจีนน้ำย้อย'], a: 2, ex: 'มีตัวแปรต้น (จำนวนวันหมัก) และตัวแปรตาม (pH) ที่วัดได้ด้วยกระดาษ pH หรือ pH meter' },
+        { lv: 'วิเคราะห์', q: 'คำถาม “ถ้าเวลานึ่งเพิ่มขึ้น ความเข้มของสีบนผ้าจะเพิ่มขึ้นหรือไม่” ตัวแปรต้นและตัวแปรตามคืออะไร', o: ['ต้น: ความเข้มของสี · ตาม: เวลานึ่ง', 'ต้น: เวลานึ่ง · ตาม: ความเข้มของสีบนผ้า', 'ต้น: ชนิดใบไม้ · ตาม: เวลานึ่ง', 'ต้น: ชนิดผ้า · ตาม: ความเข้มของสี'], a: 1, ex: 'ตัวแปรต้นคือสิ่งที่เราเปลี่ยน (เวลานึ่ง) ตัวแปรตามคือสิ่งที่เราวัด (ความเข้มของสี)' },
+        { lv: 'ประเมินค่า', q: 'กลุ่มหนึ่งเขียนคำถามขั้น 3 ที่ต้องใช้เครื่องมือราคาแพงที่โรงเรียนไม่มี ควรปรับอย่างไรจึงเหมาะที่สุด', o: ['คงคำถามเดิมไว้เพราะดูน่าเชื่อถือ', 'เปลี่ยนเป็นคำถามขั้น 1 แทน', 'หาตัวแปรตามที่วัดได้ด้วยมือถือ ตาชั่ง หรือกระดาษ pH', 'ตัดตัวแปรตามออก'], a: 2, ex: 'คำถามขั้น 3 ที่ดีต้องทำได้ด้วยเครื่องมือที่โรงเรียนมีภายใน 1 ภาคเรียน จึงควรเลือกตัวแปรตามที่วัดง่ายกว่า' }
+      ] }
+    ]
+  },
+  {
+    id: 'u2', no: 2, title: 'วิทยาศาสตร์เบื้องหลังภูมิปัญญา', hours: 18, periods: 'คาบที่ 5–22', weight: '25% + สอบกลางภาค 15%',
+    short: 'ลงพื้นที่ครบ 4 แหล่ง เก็บข้อมูลจริง แปลภูมิปัญญาเป็น S-T-E-A-M และสร้าง Mathematical Model อย่างง่าย',
+    items: [
+      { id: 'u2o', kind: 'o', code: 'ภาพรวม', title: 'เป้าหมายและแผนการเรียน', meta: 'อ่านก่อนเริ่มหน่วย', blocks: [
+        P('หน่วยภาคสนาม 18 ชั่วโมง เราลงพื้นที่ครบ 4 แหล่ง แหล่งละ 4 คาบ ในรอบเดียวกันทุกแหล่ง คือ เตรียม 1 คาบ → ลงพื้นที่ 2 คาบ → สรุป 1 คาบ แล้วปิดหน่วยด้วยการสังเคราะห์ข้าม 4 แหล่ง'),
+        H('เมื่อจบหน่วย ฉันจะสามารถ'),
+        L(['อธิบายหลักการทางวิทยาศาสตร์เบื้องหลังภูมิปัญญาแต่ละแหล่งได้อย่างถูกต้อง', 'บูรณาการ S-T-E-A-M ฟิสิกส์ เคมี ชีววิทยา คณิตศาสตร์ เทคโนโลยี และโลกดาราศาสตร์ เพื่ออธิบายกระบวนการทางภูมิปัญญาได้', 'เก็บข้อมูลเชิงปริมาณจากพื้นที่จริง และสร้าง Mathematical Model อย่างง่ายจากข้อมูลนั้นได้', 'แสดงทักษะนักประสานในการทำงานร่วมกับปราชญ์ชุมชนได้อย่างให้เกียรติ']),
+        H('ลำดับแหล่ง'),
+        T(['ลำดับ', 'แหล่ง', 'คาบที่', 'กลุ่มเจ้าภาพ'], [['1', 'ไม้ไผ่ (ไม้เสียบลูกชิ้น / ตะเกียบ)', '5–8', 'กลุ่ม 4'], ['2', 'Eco Printing กลุ่มแม่บ้านบ้านแม่ลาน', '9–12', 'กลุ่ม 2'], ['3', 'ขนมจีนน้ำย้อยบ้านแม่ลาน', '13–16', 'กลุ่ม 3'], ['4', 'ผ้าซิ่นตีนจก', '17–20', 'กลุ่ม 1']]),
+        N('นำเสนอ Timeline 2 ชนิดจากหน่วยที่ 1 ให้เพื่อนฟังในคาบเตรียม เป็นผู้ถามคำถามหลักกับปราชญ์ และนำการอภิปรายคาบสรุป กลุ่มอื่นยังทำ Field Report ของทุกแหล่งเหมือนกัน', 'บทบาทกลุ่มเจ้าภาพ: '),
+        H('แผนการเรียน คาบที่ 5–24'),
+        T(['คาบ', 'กิจกรรม'], [['5', 'เตรียมลงพื้นที่แหล่งที่ 1 ไม้ไผ่ + ใบความรู้ 2.1'], ['6–7', 'ลงพื้นที่แหล่งที่ 1'], ['8', 'สรุปแหล่งที่ 1 + ใบความรู้ 2.2 และ 2.3'], ['9 · 10–11 · 12', 'เตรียม · ลงพื้นที่ · สรุป แหล่งที่ 2 Eco Printing'], ['13 · 14–15 · 16', 'เตรียม · ลงพื้นที่ · สรุป แหล่งที่ 3 ขนมจีนน้ำย้อย'], ['17 · 18–19 · 20', 'เตรียม · ลงพื้นที่ · สรุป แหล่งที่ 4 ผ้าซิ่นตีนจก'], ['21–22', 'สังเคราะห์ข้าม 4 แหล่ง เติมผนัง Timeline ใหญ่ ทบทวนก่อนสอบ'], ['23–24', 'สอบกลางภาค (หน่วยที่ 1–2)']]),
+        H('ชิ้นงานและคะแนน'),
+        T(['ชิ้นงาน', 'ใบงาน', 'คะแนน'], [['Field Report แหล่งที่ 1–4 (Field Notes, Mapping S-T-E-A-M, Model อย่างง่าย)', '2.1–2.4 ต่อแหล่ง', 'แหล่งละ 5 รวม 20'], ['ใบงานสังเคราะห์ข้าม 4 แหล่ง', '2.5', '5'], ['สอบกลางภาค (ปรนัย 20 ข้อ + อัตนัย 2 ข้อ · 100 นาที)', '—', '15']])
+      ] },
+      { id: 'u2k1', kind: 'k', code: 'ใบความรู้ 2.1', title: 'นักวิทยาศาสตร์ภาคสนาม เก็บข้อมูลอย่างไร', meta: 'ใช้ในคาบที่ 5 และทุกคาบเตรียม', blocks: [
+        H('ข้อมูล 2 ชนิดที่ต้องเก็บ'),
+        T(['ชนิด', 'คืออะไร', 'ตัวอย่าง'], [['เชิงคุณภาพ', 'คำบรรยาย ความรู้สึก ภาพ เสียง', '“น้ำหมักมีกลิ่นเปรี้ยวคล้ายนมเปรี้ยว”'], ['เชิงปริมาณ', 'ตัวเลขพร้อมหน่วย', '“pH = 4.5 อุณหภูมิ 27 °C”']]),
+        P('นักวิทยาศาสตร์ต้องการทั้งสองชนิด คำบรรยายบอกว่า “เกิดอะไรขึ้น” ตัวเลขบอกว่า “มากน้อยแค่ไหน”'),
+        H('กฎ 5 ข้อของการจดภาคสนาม'),
+        L(['จดทันที อย่ารอกลับไปจำ', 'ตัวเลขทุกตัวต้องมีหน่วย', 'วัดซ้ำอย่างน้อย 3 ครั้งแล้วหาค่าเฉลี่ย', 'แยกให้ชัดว่าอะไร “เห็นเอง” อะไร “ปราชญ์บอก”', 'ถ่ายภาพสีคู่กับการ์ดขาวในแสงเดียวกันทุกครั้ง']),
+        N('ขออนุญาตก่อนถ่ายภาพ อัดเสียง หรือจับของ ฟังมากกว่าพูด ไม่ถามเรื่องรายได้หรือสูตรที่ไม่อยากเปิดเผย ถ้าข้อมูลขัดกับที่ค้นมา จดไว้ อย่าแย้งต่อหน้า', 'มารยาทของนักวิจัยภาคสนาม: ')
+      ] },
+      { id: 'u2k4', kind: 'k', code: 'คู่มือภาคสนาม', title: 'สิ่งที่ต้องสังเกต ความปลอดภัย และมารยาท', meta: 'ทบทวนก่อนออกเดินทางทุกครั้ง', blocks: [
+        H('แหล่งที่ 1 · ไม้ไผ่ (คาบที่ 5–8)'),
+        L(['อายุและขนาดของลำไผ่ที่เลือกใช้ ปราชญ์ดูอย่างไรว่าลำไหนใช้ได้', 'ขั้นตอนตั้งแต่ตัดลำ ตัดท่อน ผ่าซีก เหลา จนเป็นไม้เสียบหรือตะเกียบ', 'การแช่น้ำ ต้ม ตาก หรือรมควัน ใช้เวลานานเท่าไร', 'เศษไผ่ที่เหลือจากการผลิตนำไปทำอะไรต่อ (เชื่อมกับเชื้อเพลิงอัดแท่งที่เรียนในเทอม 1)']),
+        H('แหล่งที่ 2 · Eco Printing (คาบที่ 9–12)'),
+        L(['ชนิดผ้าที่ใช้ และการเตรียมผ้าก่อนพิมพ์', 'ชนิดใบไม้ที่ใช้ได้ดีและใช้ไม่ได้ ปราชญ์เลือกจากอะไร', 'สารช่วยติดสีที่ใช้ (สารส้ม น้ำสนิม หรืออื่น ๆ) และสีที่ได้จากแต่ละชนิด', 'การจัดวางใบ การม้วนหรือพับผ้า การมัด และเวลานึ่ง', 'การล้าง ตาก และการดูแลผ้าหลังพิมพ์']),
+        H('แหล่งที่ 3 · ขนมจีนน้ำย้อย (คาบที่ 13–16)'),
+        L(['ชนิดข้าวที่ใช้ การแช่และหมัก หมักกี่วัน หมักในภาชนะอะไร', 'ปราชญ์รู้ได้อย่างไรว่าข้าวหมักได้ที่ (กลิ่น สัมผัส สี)', 'การโม่ การทับน้ำ การนวด การบีบเส้นลงน้ำเดือด และการแช่น้ำเย็น', 'ความต่างระหว่างหน้าร้อนกับหน้าหนาว']),
+        N('แต่ละกลุ่มตั้งขวดหมักข้าวในห้องเรียน วัด pH น้ำหมักทุกวัน ทุกขวดติดฉลาก “ห้ามรับประทาน”', 'กิจกรรมคู่ขนานตั้งแต่คาบที่ 13: '),
+        H('แหล่งที่ 4 · ผ้าซิ่นตีนจก (คาบที่ 17–20)'),
+        L(['เส้นใยที่ใช้ (ฝ้าย ไหม) และการเตรียมเส้นด้าย', 'สีย้อมธรรมชาติที่ใช้ และแหล่งวัตถุดิบ เช่น ครั่ง ห้อม ขมิ้น เปลือกไม้', 'การย้อม โดยเฉพาะการย้อมห้อมที่สีเปลี่ยนเมื่อสัมผัสอากาศ (ถ้ามีให้ดู)', 'กี่ทอผ้าและเทคนิคการจก ช่างนับเส้นอย่างไร ใช้แบบลายหรือไม่', 'ผ้าเก่ากับผ้าใหม่ต่างกันอย่างไรเรื่องสีและลาย']),
+        H('ความปลอดภัย'),
+        T(['ความเสี่ยง', 'แหล่ง', 'ข้อปฏิบัติ'], [['มีด เครื่องผ่าหรือเครื่องเหลาไม้', 'ไม้ไผ่', 'ยืนห่างจากจุดทำงานตามที่ปราชญ์กำหนด ห้ามจับเครื่องมือเอง'], ['น้ำเดือด หม้อนึ่ง ไอน้ำ', 'Eco Printing, ขนมจีน', 'ห้ามยืนเหนือหม้อ การวัดอุณหภูมิให้ปราชญ์หรือครูเป็นผู้ถือ'], ['สารช่วยติดสี น้ำสนิม หม้อห้อม', 'Eco Printing, ตีนจก', 'ไม่ใช้มือเปล่าจุ่ม ล้างมือทุกครั้งหลังจับผ้าหรือน้ำย้อม'], ['อาหารระหว่างกระบวนการ', 'ขนมจีน', 'ห้ามชิมข้าวหมักหรือน้ำหมัก สวมหมวกคลุมผมหรือผ้ากันเปื้อนถ้าปราชญ์ขอ'], ['การเดินทาง', 'ทุกแหล่ง', 'รายงานตัวกับครูทุกครั้งที่ขึ้น–ลงรถ']]),
+        H('มารยาทภาคสนาม'),
+        L(['ไหว้และแนะนำตัวเมื่อถึง กล่าวขอบคุณก่อนกลับ', 'ขออนุญาตก่อนถ่ายภาพ บันทึกเสียง หรือจับสิ่งของ', 'ไม่ถามเรื่องรายได้ ราคาต้นทุน หรือสูตรที่ปราชญ์ไม่อยากเปิดเผย', 'ถ้าคำตอบขัดกับสิ่งที่ค้นมา ห้ามแย้งต่อหน้า ให้จดไว้แล้วนำมาอภิปรายในคาบสรุป'])
+      ] },
+      { id: 'u2k2', kind: 'k', code: 'ใบความรู้ 2.2', title: 'Mapping S-T-E-A-M แปลภูมิปัญญาเป็น 5 ศาสตร์', meta: 'ใช้ในคาบที่ 8 และทุกคาบสรุป', blocks: [
+        P('นำขั้นตอนจริงจาก Timeline กระบวนการที่แก้แล้ว มาถามทีละศาสตร์ว่า “ขั้นนี้เกี่ยวกับศาสตร์นี้อย่างไร”'),
+        T(['ศาสตร์', 'ถามตัวเองว่า'], [['S วิทยาศาสตร์', 'เกิดการเปลี่ยนแปลงทางกายภาพ เคมี หรือชีวภาพอะไร เพราะอะไร'], ['T เทคโนโลยี', 'ใช้เครื่องมืออะไร เครื่องมือเปลี่ยนไปอย่างไรตามยุค'], ['E วิศวกรรม', 'มีปัญหาอะไรที่ต้องออกแบบแก้ ถ้าจะทำให้ดีขึ้นต้องควบคุมอะไร'], ['A ศิลปะ / วัฒนธรรม', 'มีความงาม ความหมาย หรือคุณค่าทางวัฒนธรรมอะไร'], ['M คณิตศาสตร์', 'มีอะไรนับ วัด หรือคำนวณได้บ้าง']]),
+        H('ตัวอย่าง: ขั้น “ต้มไม้ไผ่”'),
+        T(['ศาสตร์', 'ตัวอย่าง'], [['S', 'ความร้อนและน้ำช่วยชะแป้งออกจากเนื้อไม้ มอดและราจึงไม่มีอาหาร'], ['T', 'หม้อต้มขนาดใหญ่ เชื้อเพลิง'], ['E', 'ต้องควบคุมเวลาต้มให้พอดี นานไปไม้อาจเปราะ'], ['A', 'ไม้ที่ต้มแล้วสีอ่อนสม่ำเสมอ ดูสะอาด'], ['M', 'ต้มกี่นาที ใช้เชื้อเพลิงเท่าไรต่อไม้ 1 กิโลกรัม']])
+      ] },
+      { id: 'u2k3', kind: 'k', code: 'ใบความรู้ 2.3', title: 'Mathematical Model อย่างง่าย 3 ชนิด', meta: 'ใช้ในคาบที่ 8 และทุกคาบสรุป', blocks: [
+        X('Ask → Select → Formulate → Solve → Validate', 'Mathematical Modelling 5 ขั้น  '),
+        P('จำ 5 ขั้นจากเทอม 1 ได้ไหม ในหน่วยนี้เราจะทำครบทั้ง 5 ขั้นด้วยข้อมูลจริงจากภาคสนาม'),
+        T(['ชนิด', 'ใช้เมื่อ', 'รูปแบบ', 'ใช้ที่แหล่ง'], [['Static', 'ความสัมพันธ์ไม่ขึ้นกับเวลา เป็นสัดส่วนหรือการนับ', 'ค่า = ส่วนหนึ่ง ÷ ส่วนรวม, จำนวน = ความยาวรวม ÷ ความยาวต่อหน่วย', 'ไม้ไผ่, ผ้าซิ่นตีนจก'], ['Linear', 'สิ่งหนึ่งเพิ่มขึ้นสม่ำเสมอตามอีกสิ่งหนึ่ง', 'y = mx + c', 'Eco Printing'], ['Stochastic', 'ผลไม่เท่ากันทุกครั้ง มีความไม่แน่นอน', 'ค่าเฉลี่ย และช่วงต่ำสุด–สูงสุด', 'ขนมจีนน้ำย้อย']]),
+        H('วิธีสร้าง Linear Model จากกราฟ'),
+        L(['ใส่ตัวแปรต้นบนแกน x ตัวแปรตามบนแกน y พร้อมหน่วย', 'พล็อตจุดข้อมูลทุกจุด', 'ลากเส้นตรง 1 เส้นที่ผ่านใกล้จุดส่วนใหญ่ที่สุด', 'เลือก 2 จุดบนเส้น หาความชัน m = (y₂ − y₁) ÷ (x₂ − x₁) และอ่านค่า c ที่เส้นตัดแกน y', 'Validate: ใช้สมการทำนายค่าที่ไม่ได้วัด แล้วถามว่าสมเหตุสมผลไหม']),
+        N('แต่ต้องบอกได้ว่าใช้ได้ในช่วงไหน และใช้ไม่ได้เมื่อไร', 'Model ที่ดีไม่จำเป็นต้องถูกทุกกรณี ')
+      ] },
+      { id: 'u2w1', kind: 'w', perSource: true, code: 'ใบงาน 2.1', title: 'Field Notes บันทึกภาคสนาม', meta: 'กลุ่ม · ส่วนหนึ่งของ Field Report แหล่งละ 5 คะแนน', intro: 'ส่วน ก ทำในคาบเตรียม ส่วน ข และ ค ทำระหว่างลงพื้นที่', blocks: [
+        F('วันที่ลงพื้นที่ · ผู้ให้ข้อมูล · หน้าที่วันนี้ (ผู้ถาม · ผู้จด · ผู้ถ่ายภาพ · ผู้วัด)', 2),
+        S('ส่วน ก', 'คาดการณ์ก่อนไป'),
+        G(['ข้อ', 'สิ่งที่คาดการณ์', 'เหตุผล'], rowsOf(['ขั้นตอนสำคัญที่สุด 3 ขั้น', 'ตัวแปรที่จะวัด และค่าที่คาดว่าจะได้ (พร้อมหน่วย)', 'คำถามสำหรับปราชญ์ 3 ข้อ'], 2)),
+        S('ส่วน ข', 'สิ่งที่เห็นและได้ยินในพื้นที่'),
+        G(['ขั้นที่', 'สิ่งที่ทำ', 'ข้อมูลเชิงคุณภาพ (สี กลิ่น เสียง สัมผัส)', 'ตัวเลขที่ปราชญ์บอก (พร้อมหน่วย)', 'เห็นเอง / ปราชญ์บอก'], nums(6, 4)),
+        F('คำตอบสำคัญจากการถามปราชญ์', 3),
+        S('ส่วน ค', 'ข้อมูลที่วัดได้'),
+        G(['สิ่งที่วัด', 'หน่วย', 'ครั้งที่ 1', 'ครั้งที่ 2', 'ครั้งที่ 3', 'ค่าเฉลี่ย'], [[null, null, null, null, null, null], [null, null, null, null, null, null], [null, null, null, null, null, null], [null, null, null, null, null, null]]),
+        S('3-2-1', 'วงสะท้อนก่อนกลับ'),
+        F('3 สิ่งที่เห็น', 2), F('2 สิ่งที่ไม่ตรงกับที่ทำนาย', 2), F('1 คำถามที่ยังค้างใจ', 1)
+      ] },
+      { id: 'u2w2', kind: 'w', perSource: true, code: 'ใบงาน 2.2', title: 'Field Report หน้าสรุป', meta: 'กลุ่ม · ทำในคาบสรุป', blocks: [
+        S('1', 'สิ่งที่ไม่ตรงกับที่คาดการณ์'),
+        G(['เราคิดว่า', 'ของจริงคือ', 'เราเรียนรู้อะไรจากความต่างนี้'], [[null, null, null], [null, null, null]]),
+        F('2. วิทยาศาสตร์เบื้องหลังภูมิปัญญานี้ (อธิบาย 3–5 บรรทัดด้วยคำของกลุ่มเอง)', 5),
+        F('3. คำถามที่ยังตอบไม่ได้ และอยากทดลองต่อ (ถ้า... แล้ว...)', 2),
+        F('4. ความรู้สึกต่อภูมิปัญญาและผู้สืบทอด (2–3 บรรทัด)', 3)
+      ] },
+      { id: 'u2w3', kind: 'w', perSource: true, code: 'ใบงาน 2.3', title: 'Mapping S-T-E-A-M', meta: 'กลุ่ม · ทำในคาบสรุป', intro: 'เลือกขั้นตอนจริง 3 ขั้นที่สำคัญที่สุด แล้วเติมให้ครบทุกศาสตร์ เชื่อมกับสิ่งที่เห็นจริง ไม่ใช่คำกว้าง ๆ', blocks: [
+        G(['ขั้นตอน', 'S วิทยาศาสตร์', 'T เทคโนโลยี', 'E วิศวกรรม', 'A ศิลปะ / วัฒนธรรม', 'M คณิตศาสตร์'], [[null, null, null, null, null, null], [null, null, null, null, null, null], [null, null, null, null, null, null]]),
+        F('สาขาวิทยาศาสตร์ที่เกี่ยวข้องมากที่สุด (ฟิสิกส์ / เคมี / ชีววิทยา / โลก ดาราศาสตร์และอวกาศ) เพราะ...', 2)
+      ] },
+      { id: 'u2w4', kind: 'w', perSource: true, code: 'ใบงาน 2.4', title: 'Mathematical Model อย่างง่าย', meta: 'กลุ่ม · ทำในคาบสรุป', intro: 'ใช้ข้อมูลจริงจากส่วน ค ของ Field Notes ทำให้ครบ 5 ขั้น แนบกราฟหรือตารางกับครูได้', blocks: [
+        F('ชนิด Model ของแหล่งนี้ (Static / Linear / Stochastic) และเหตุผล', 2),
+        G(['ขั้น', 'คำถามนำ', 'คำตอบของกลุ่ม'], [['Ask', 'อยากรู้อะไรที่ตอบด้วยตัวเลขได้', null], ['Select', 'ใช้ตัวแปรอะไร (พร้อมหน่วย) ตัดอะไรออกไปบ้าง', null], ['Formulate', 'เขียนความสัมพันธ์หรือสมการ', null], ['Solve', 'แทนค่าจากข้อมูลจริง ได้ผลเท่าไร (แสดงวิธีทำ)', null], ['Validate', 'ผลตรงกับที่ปราชญ์บอกหรือที่สังเกตได้ไหม ถ้าไม่ตรงเพราะอะไร Model นี้ใช้ได้ในช่วงไหน', null]])
+      ] },
+      { id: 'u2w5', kind: 'w', code: 'ใบงาน 2.5', title: 'สังเคราะห์ 4 แหล่ง', meta: 'กลุ่ม · คาบที่ 21–22 · 5 คะแนน', intro: 'ใช้ Field Report ทั้ง 4 ฉบับของกลุ่มเป็นหลักฐาน', blocks: [
+        S('ตอนที่ 1', 'ตารางเปรียบเทียบ'),
+        G(['ประเด็น', 'ไม้ไผ่', 'Eco Printing', 'ขนมจีนน้ำย้อย', 'ผ้าซิ่นตีนจก'], rowsOf(['วัตถุดิบหลัก', 'การเปลี่ยนแปลงสำคัญ (กายภาพ / เคมี / ชีวภาพ)', 'ตัวแปรที่ต้องควบคุม', 'ขั้นที่ปราชญ์ตัดสินด้วยประสาทสัมผัส', 'ชนิด Model และผลที่ได้', 'ความท้าทายที่ภูมิปัญญากำลังเจอ'], 4)),
+        F('แบบแผนร่วมที่กลุ่มพบ อย่างน้อย 3 ข้อ (แต่ละข้อยกตัวอย่างอย่างน้อย 2 แหล่ง)', 5),
+        S('ตอนที่ 2', 'จุดที่วิทยาศาสตร์ช่วยภูมิปัญญาได้ (อย่างน้อย 2 จุด)'),
+        G(['แหล่ง', 'ปัญหาหรือโอกาส', 'วิทยาศาสตร์ช่วยอย่างไร', 'ต้องระวังอะไรไม่ให้คุณค่าภูมิปัญญาหายไป'], [[null, null, null, null], [null, null, null, null]])
+      ] },
+      { id: 'u2q', kind: 'q', code: 'ทดสอบหลังเรียน', title: 'หน่วยที่ 2 วิทยาศาสตร์เบื้องหลังภูมิปัญญา', meta: '12 ข้อ · ทบทวนก่อนสอบกลางภาค', qs: [
+        { lv: 'เข้าใจ', q: 'ข้อใดเป็นข้อมูลเชิงปริมาณ', o: ['น้ำหมักมีกลิ่นเปรี้ยวคล้ายนมเปรี้ยว', 'ผ้ามีสีน้ำตาลอมเหลือง', 'pH = 4.5 อุณหภูมิ 27 °C', 'เนื้อไผ่ผิวนอกแข็งกว่าด้านใน'], a: 2, ex: 'ข้อมูลเชิงปริมาณคือตัวเลขพร้อมหน่วย ข้ออื่นเป็นคำบรรยายจึงเป็นข้อมูลเชิงคุณภาพ' },
+        { lv: 'นำไปใช้', q: 'ข้อใดเป็นการจดภาคสนามที่ถูกต้องตามกฎ 5 ข้อ', o: ['จดสรุปรวมเมื่อกลับถึงโรงเรียน', 'วัดซ้ำอย่างน้อย 3 ครั้งแล้วหาค่าเฉลี่ย', 'เขียนตัวเลขโดยไม่ต้องใส่หน่วยถ้าจำได้', 'รวมสิ่งที่เห็นเองกับสิ่งที่ปราชญ์บอกไว้ในช่องเดียวกัน'], a: 1, ex: 'การวัดซ้ำ 3 ครั้งช่วยลดความคลาดเคลื่อน นอกจากนี้ต้องจดทันที ใส่หน่วยทุกตัว และแยก “เห็นเอง” กับ “ปราชญ์บอก”' },
+        { lv: 'นำไปใช้', q: 'ไม้เสียบสด 10 อันมีมวล 15.0 g หลังตากแห้งเหลือ 12.0 g ปริมาณความชื้นเทียบกับมวลแห้งเป็นเท่าใด', o: ['20%', '25%', '80%', '125%'], a: 1, ex: '(15.0 − 12.0) ÷ 12.0 × 100 = 25%' },
+        { lv: 'เข้าใจ', q: 'ทำไมจึงผ่าไม้ไผ่เป็นซีกเล็ก ๆ ด้วยมีดได้ง่าย', o: ['เนื้อไผ่มีน้ำมาก', 'มัดเส้นใยเรียงตามแนวยาวของลำ จึงแยกออกตามแนวเสี้ยนได้ง่าย', 'ไผ่มีแป้งมาก', 'ไผ่ถูกต้มก่อนผ่าเสมอ'], a: 1, ex: 'เส้นใยเรียงตามยาวทำให้ทนแรงดึงตามแนวเสี้ยนได้ดีมาก แต่แยกออกตามแนวเสี้ยนได้ง่าย' },
+        { lv: 'เข้าใจ', q: 'การแช่น้ำ ต้ม และตากหรือรมควันไม้ไผ่ มีจุดประสงค์ทางวิทยาศาสตร์ข้อใด', o: ['ทำให้ไม้หนักขึ้น', 'เพิ่มแป้งในเนื้อไม้', 'ลดแป้งและความชื้นซึ่งเป็นอาหารของมอดและเชื้อรา', 'เปลี่ยนสีไม้ให้เข้มขึ้นเท่านั้น'], a: 2, ex: 'แป้งเป็นอาหารของมอดและรา การลดแป้งและความชื้นช่วยให้ไม้ไม่ขึ้นราและไม่ถูกมอดกิน' },
+        { lv: 'วิเคราะห์', q: 'ผลการทดลอง Eco Printing ได้ความเข้มสี D = 40, 55, 70, 85 ที่เวลานึ่ง 15, 30, 45, 60 นาที ข้อใดถูกต้อง', o: ['ความเข้มเพิ่ม 1 หน่วยทุก 15 นาที', 'ความเข้มเพิ่ม 15 หน่วยต่อนาที', 'ความเข้มเพิ่ม 1 หน่วยต่อนาที และถ้านึ่ง 0 นาทีจะได้ D = 25', 'ข้อมูลนี้ใช้ Stochastic Model เหมาะที่สุด'], a: 2, ex: 'ความชัน = 15 ÷ 15 = 1 หน่วยต่อนาที และ c = 40 − 15 = 25 ลองคิดต่อว่าค่า c มีความหมายจริงไหม เพราะผ้าที่ไม่ได้นึ่งอาจไม่มีรอยเลย นี่คือขอบเขตของ Model' },
+        { lv: 'เข้าใจ', q: 'สารช่วยติดสี (mordant) เช่น สารส้ม หรือน้ำสนิม ทำหน้าที่อย่างไร', o: ['ทำให้ผ้าแห้งเร็วขึ้น', 'ไอออนโลหะจับกับสารในใบไม้และเส้นใย ทำให้สีติดทนขึ้นและเปลี่ยนเฉด', 'ฆ่าเชื้อราบนใบไม้', 'ทำให้ใบไม้นิ่มลงเท่านั้น'], a: 1, ex: 'ไอออนโลหะเป็นตัวเชื่อมสารให้สีกับเส้นใย สารส้มมักให้สีสว่าง ส่วนเหล็กทำปฏิกิริยากับแทนนินให้สีเข้มคล้ำ' },
+        { lv: 'เข้าใจ', q: 'ระหว่างหมักข้าวทำขนมจีน pH ของน้ำหมักลดลงเพราะอะไร', o: ['น้ำระเหยออกไป', 'จุลินทรีย์ เช่น แบคทีเรียกรดแลคติกและยีสต์ เติบโตและผลิตกรด', 'ข้าวดูดซับเบสจากน้ำ', 'อุณหภูมิของน้ำสูงขึ้นจนเดือด'], a: 1, ex: 'จุลินทรีย์ผลิตกรดทำให้ pH ลดลง เนื้อข้าวนุ่มลงจึงโม่ง่ายขึ้น และเกิดกลิ่นเปรี้ยวเฉพาะตัว' },
+        { lv: 'เข้าใจ', q: 'การย้อมห้อมที่ผ้าเปลี่ยนเป็นสีน้ำเงินหลังยกขึ้นจากหม้อ เกิดจากสาเหตุใด', o: ['ผ้าสะท้อนแสงแดดมากขึ้น', 'สีย้อมทำปฏิกิริยากับออกซิเจนในอากาศ', 'น้ำระเหยออกจากเส้นใย', 'จุลินทรีย์บนผ้าผลิตสี'], a: 1, ex: 'สีครามในหม้อห้อมอยู่ในรูปที่ละลายน้ำได้ เมื่อสัมผัสอากาศจะถูกออกซิไดซ์กลับเป็นสีน้ำเงิน' },
+        { lv: 'เข้าใจ', q: 'ผ้าย้อมสีธรรมชาติซีดเมื่อตากแดดนาน ๆ เพราะเหตุใด', o: ['รังสียูวีในแดดทำลายโมเลกุลสีย้อม', 'แสงแดดทำให้เส้นใยหดตัว', 'ผ้าดูดกลืนแสงทุกสีเท่ากัน', 'ความร้อนทำให้สีกลายเป็นไอ'], a: 0, ex: 'สีที่ตาเห็นคือแสงที่ผ้าสะท้อน และรังสียูวีในแดดทำลายโมเลกุลสีย้อมได้ ผ้าจึงซีด' },
+        { lv: 'นำไปใช้', q: 'จำนวนวันหมักข้าวจนได้ที่ 6 รอบ คือ 4, 5, 3, 6, 4, 5 วัน ข้อสรุปแบบ Stochastic Model ข้อใดถูกต้อง', o: ['ข้าวหมักได้ที่ใน 4 วันทุกครั้ง', 'ข้าวหมักได้ที่เฉลี่ย 4.5 วัน อยู่ในช่วง 3–6 วัน', 'ข้าวหมักได้ที่เฉลี่ย 5 วัน อยู่ในช่วง 4–5 วัน', 'ข้อมูลกระจายจึงสรุปอะไรไม่ได้'], a: 1, ex: 'ผลรวม 27 ÷ 6 = 4.5 วัน ต่ำสุด 3 สูงสุด 6 ค่ากระจายเพราะอุณหภูมิอากาศ ฤดูกาล ความสะอาดภาชนะ หรือชนิดข้าว' },
+        { lv: 'วิเคราะห์', q: 'ในการทำ Mapping S-T-E-A-M ข้อความ “ต้องควบคุมเวลาต้มให้พอดี นานไปไม้อาจเปราะ” จัดอยู่ในศาสตร์ใด', o: ['S วิทยาศาสตร์', 'T เทคโนโลยี', 'E วิศวกรรม', 'M คณิตศาสตร์'], a: 2, ex: 'ศาสตร์ E ถามว่ามีปัญหาอะไรที่ต้องออกแบบแก้ และต้องควบคุมอะไรเพื่อให้ได้ผลดีขึ้น' }
+      ] }
+    ]
+  },
+  {
+    id: 'u3', no: 3, title: 'กลับมาเรียน — วิทยาศาสตร์เชื่อมภูมิปัญญา', hours: 8, periods: 'คาบที่ 25–32', weight: '20% ของรายวิชา',
+    short: 'เจาะลึก 1 แหล่งที่สนใจที่สุด ทดลองเพิ่ม วิเคราะห์ข้อมูลด้วย Google Sheets และหาปัญหาหรือโอกาสที่วิทยาศาสตร์ช่วยได้',
+    items: [
+      { id: 'u3o', kind: 'o', code: 'ภาพรวม', title: 'เป้าหมายและแผนการเรียน', meta: 'อ่านก่อนเริ่มหน่วย', blocks: [
+        P('เรากลับเข้าห้องเรียน 8 คาบ เพื่อขุดลึกแหล่งที่สนใจที่สุด 1 แหล่ง นำข้อมูลภาคสนามมาวิเคราะห์ เติมด้วยการทดลองย่อยที่โรงเรียน จนได้ Mind Map ที่เชื่อมศาสตร์กันจริง และ Mathematical Model ที่ผ่านการ Validate'),
+        N('จัดตามความสนใจจาก Exit Ticket คาบที่ 22 กลุ่มละ 3–5 คน กลุ่มนี้มีแนวโน้มเป็นทีมโครงงานในหน่วยที่ 4 และ ม.5', 'กลุ่มเจาะลึก: '),
+        H('เมื่อจบหน่วย ฉันจะสามารถ'),
+        L(['วิเคราะห์ข้อมูลจากพื้นที่และการทดลองโดยใช้ Mathematical Modelling ครบ 5 ขั้นได้อย่างเป็นระบบ', 'เชื่อมโยงความรู้ S-T-E-A-M กับภูมิปัญญาท้องถิ่นได้ลึกซึ้ง โดยแสดงความเชื่อมโยงข้ามศาสตร์ได้', 'ระบุปัญหาหรือโอกาสในการพัฒนาภูมิปัญญาท้องถิ่นด้วยวิทยาศาสตร์ได้', 'ทำงานร่วมกับผู้อื่นและรับฟังข้อเสนอแนะเพื่อปรับปรุงงานได้']),
+        H('แผนการเรียน คาบที่ 25–32'),
+        T(['คาบ', 'ชื่อคาบ', 'สิ่งที่เราจะทำ', 'ใช้'], [['25', 'เลือกแหล่ง ตั้งการทดลอง', 'จัดกลุ่มเจาะลึก สำรวจข้อมูลที่มี ตั้งการทดลองระยะยาว', 'ใบงาน 3.1, 3.3'], ['26', 'Mind Map ฉบับที่ 1', 'สร้าง Mind Map S-T-E-A-M × ภูมิปัญญา พร้อมเส้นเชื่อมข้ามศาสตร์', 'ใบความรู้ 3.1 · ใบงาน 3.2'], ['27', 'คลินิกผู้เชี่ยวชาญ', 'เวียนถามครูฟิสิกส์ เคมี ชีววิทยา คณิต/คอมพิวเตอร์', 'บัตรคำถามคลินิก (ใบงาน 3.2)'], ['28–29', 'ทดลองย่อย', 'เก็บข้อมูลเพิ่ม ควบคุมตัวแปร วัดซ้ำ', 'ใบงาน 3.3'], ['30', 'ยกระดับ Model', 'วิเคราะห์ข้อมูลด้วย Google Sheets หาแนวโน้ม Validate และบอกขอบเขต', 'ใบความรู้ 3.2 · ใบงาน 3.4'], ['31', 'ปัญหาและโอกาส', 'ต้นไม้ปัญหา–โอกาส และ Mind Map ฉบับสมบูรณ์', 'ใบความรู้ 3.3 · ใบงาน 3.5'], ['32', 'Science Café', 'นำเสนอแบบโต๊ะกาแฟ รับ Feedback ส่งชิ้นงาน', '—']]),
+        H('ชิ้นงานและคะแนน'),
+        T(['ชิ้นงาน', 'ใบงาน', 'คะแนน'], [['Mind Map S-T-E-A-M × ภูมิปัญญา ฉบับสมบูรณ์', '3.2', '8'], ['Mathematical Model ฉบับปรับปรุง (รวมข้อมูลการทดลองย่อย)', '3.3, 3.4', '8'], ['ต้นไม้ปัญหา–โอกาส', '3.5', '4'], ['ใบงาน 3.1 และการนำเสนอ Science Café', '3.1', 'ไม่คิดคะแนน ใช้ Feedback']])
+      ] },
+      { id: 'u3k1', kind: 'k', code: 'ใบความรู้ 3.1', title: 'Mind Map ที่ศาสตร์คุยกันได้', meta: 'ใช้ในคาบที่ 26 และ 31', blocks: [
+        P('ในโลกจริง ภูมิปัญญาไม่ได้แยกเป็นวิชา การหมักข้าวเป็นทั้งชีววิทยา เคมี และคณิตศาสตร์ในเวลาเดียวกัน Mind Map ของเราจึงต้องแสดงว่าศาสตร์ต่าง ๆ เชื่อมกันอย่างไร'),
+        H('Mind Map 3 ชั้น'),
+        L([['กลาง — ', 'ชื่อภูมิปัญญา'], ['ชั้นที่ 1 — ', '5 ศาสตร์ S-T-E-A-M ใช้ปากกาสีละศาสตร์'], ['ชั้นที่ 2 — ', 'แนวคิดหรือหลักการ (เขียนสั้น 1 บรรทัด)'], ['ชั้นที่ 3 — ', 'หลักฐาน: ตัวเลข ภาพ หรือคำพูดของปราชญ์ ที่ยืนยันแนวคิดนั้น']]),
+        H('เส้นเชื่อมข้ามศาสตร์'),
+        P('ลากระหว่างกล่องที่อยู่ต่างศาสตร์ และต้องเขียนคำกริยากำกับเส้นเสมอ เช่น ทำให้ · วัดได้ด้วย · ควบคุมโดย · จำกัด · นำไปคำนวณ'),
+        X('“เส้นใยไผ่เรียงตามยาว” (S) ทำให้ “ผ่าซีกด้วยมีดได้ง่าย” (T) ซึ่งนำไปคำนวณ “จำนวนไม้เสียบต่อลำ” (M)', 'ตัวอย่าง  '),
+        N('วงสีแดง = จุดที่ยังไม่มีหลักฐาน เปลี่ยนเป็นวงสีเขียวเมื่อหาหลักฐานได้แล้ว', 'สัญลักษณ์: ')
+      ] },
+      { id: 'u3k2', kind: 'k', code: 'ใบความรู้ 3.2', title: 'วิเคราะห์ข้อมูลด้วย Google Sheets', meta: 'ใช้ในคาบที่ 30', blocks: [
+        P('คอลัมน์ A = ตัวแปรต้น (พร้อมหน่วย) คอลัมน์ B, C, D = ค่าที่วัดครั้งที่ 1, 2, 3 คอลัมน์ E = ค่าเฉลี่ย', 'ขั้นที่ 1 จัดข้อมูล  '),
+        H('ขั้นที่ 2 สรุปค่า'),
+        T(['ต้องการ', 'พิมพ์ในเซลล์'], [['ค่าเฉลี่ยของแถว 2', '=AVERAGE(B2:D2)'], ['ค่าต่ำสุด / สูงสุดของคอลัมน์ E', '=MIN(E2:E7) / =MAX(E2:E7)'], ['ความชันของเส้นตรง', '=SLOPE(E2:E7, A2:A7)'], ['จุดตัดแกน y', '=INTERCEPT(E2:E7, A2:A7)']]),
+        P('เลือกคอลัมน์ A และ E > แทรก > แผนภูมิ > ประเภท “แผนภูมิกระจาย” > ปรับแต่ง > ชุดข้อมูล > ติ๊ก “เส้นแนวโน้ม” > ป้ายกำกับ “ใช้สมการ” > ติ๊ก “แสดง R²” > ใส่ชื่อแกนพร้อมหน่วย', 'ขั้นที่ 3 สร้างกราฟ  '),
+        H('ขั้นที่ 4 อ่านผล'),
+        L([['ความชัน (m) ', 'บอกว่าตัวแปรตามเปลี่ยนเท่าไรเมื่อตัวแปรต้นเพิ่ม 1 หน่วย'], ['R² ', 'ใกล้ 1 = จุดเกาะเส้นตรงดี ใกล้ 0 = ข้อมูลไม่เป็นเส้นตรง (อาจต้องใช้ Model ชนิดอื่น)']]),
+        P('ใช้สมการทำนายค่าที่ไม่ได้ใช้สร้างกราฟ แล้วหาความคลาดเคลื่อน ถ้าไม่เกินประมาณ 10% ถือว่า Model ใช้ทำนายในช่วงนั้นได้ดีสำหรับงานระดับนี้', 'ขั้นที่ 5 Validate  '),
+        X('ความคลาดเคลื่อน (%) = |ค่าทำนาย − ค่าที่วัดได้| ÷ ค่าที่วัดได้ × 100', 'สูตร  '),
+        N('ไม่ต้องลากเส้นตรง ให้ทำตาราง ค่าเฉลี่ย ต่ำสุด สูงสุด ของแต่ละวัน แล้วสร้างกราฟเส้นของค่าเฉลี่ย พร้อมเขียนช่วงต่ำสุด–สูงสุดกำกับ', 'สำหรับ Stochastic Model: ')
+      ] },
+      { id: 'u3k3', kind: 'k', code: 'ใบความรู้ 3.3', title: 'ปัญหา หรือ โอกาส', meta: 'ใช้ในคาบที่ 31', blocks: [
+        T(['', 'ปัญหา', 'โอกาส'], [['คืออะไร', 'สิ่งที่ทำให้ภูมิปัญญาเสียหาย ช้า สิ้นเปลือง หรือได้ผลไม่สม่ำเสมอ', 'สิ่งที่ยังไม่มีใครทำ แต่ถ้าทำจะเพิ่มคุณค่า'], ['ถามตัวเองว่า', 'ผู้สืบทอดบ่นหรือกังวลเรื่องอะไร', 'อะไรถูกทิ้งทั้งที่ยังใช้ได้ อะไรที่ยังวัดไม่ได้']]),
+        H('ต้นไม้ปัญหา–โอกาส'),
+        L([['ลำต้น — ', 'ปัญหาหรือโอกาส เขียน 1 ประโยค ให้แคบและชัด'], ['ราก (ด้านล่าง) — ', 'สาเหตุ อย่างน้อย 2 ราก แต่ละรากต้องมีหลักฐาน'], ['กิ่ง (ด้านบน) — ', 'ผลกระทบต่อผู้สืบทอด ชุมชน หรือสิ่งแวดล้อม']]),
+        N('แคบพอทำได้จริงใน 1 ปี มีหลักฐานจากข้อมูลที่เราวัดเอง และถ้าแก้ได้ ผู้สืบทอดภูมิปัญญาได้ประโยชน์จริง', 'ประเด็นที่ดี: '),
+        T(['กว้างไป', 'พอดี'], [['“ผ้าทอลองขายไม่ได้”', '“สีขมิ้นบนผ้าฝ้ายซีดลงชัดเจนหลังซัก 3 ครั้ง ถ้าไม่ใช้สารช่วยติดสี”']])
+      ] },
+      { id: 'u3w1', kind: 'w', code: 'ใบงาน 3.1', title: 'เรามีข้อมูลอะไรแล้วบ้าง', meta: 'กลุ่มเจาะลึก · คาบที่ 25 · ไม่คิดคะแนน', blocks: [
+        F('แหล่งที่เจาะลึก และสมาชิก', 2),
+        G(['ประเภทข้อมูล', 'ที่มีอยู่แล้ว (ระบุแหล่งที่มา)', 'ยังขาด หรือยังไม่น่าเชื่อถือเพราะ'], rowsOf(['ขั้นตอนกระบวนการจริง', 'ข้อมูลเชิงคุณภาพ (สี กลิ่น สัมผัส คำพูดปราชญ์)', 'ข้อมูลเชิงปริมาณ (ตัวเลขพร้อมหน่วย)', 'หลักการวิทยาศาสตร์ที่อธิบายได้แล้ว', 'Model จากหน่วยที่ 2 และจุดอ่อน'], 2)),
+        F('การทดลองระยะยาวที่ตั้งวันนี้', 2),
+        G(['วัน', 'ผู้รับผิดชอบเก็บข้อมูล', 'เวลา'], rowsOf(['จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์'], 2)),
+        F('เราทำนายว่าใน 7 วัน ข้อมูลจะ...', 2)
+      ] },
+      { id: 'u3w2', kind: 'w', code: 'ใบงาน 3.2', title: 'Mind Map S-T-E-A-M × ภูมิปัญญา', meta: 'กลุ่มเจาะลึก · คาบที่ 26 และ 31 · 8 คะแนน', intro: 'วาด Mind Map บนกระดาษ A3 หรือกระดาษปรู๊ฟตามใบความรู้ 3.1 แล้วกรอกตารางตรวจสอบด้านล่างก่อนส่งฉบับสมบูรณ์', blocks: [
+        S('ตาราง', 'เส้นเชื่อมข้ามศาสตร์ (อย่างน้อย 5 เส้น)'),
+        G(['เส้นที่', 'จากกล่อง (ศาสตร์)', 'คำกริยากำกับ', 'ไปกล่อง (ศาสตร์)', 'หลักฐาน'], nums(5, 4)),
+        S('วงแดง', 'จุดที่เคยไม่มีหลักฐานในฉบับที่ 1 และวิธีที่หาหลักฐานได้'),
+        G(['จุดที่เคยไม่มีหลักฐาน', 'ได้คำตอบจาก (คลินิก / ทดลอง / ค้นคว้า)', 'คำตอบโดยย่อ'], [[null, null, null], [null, null, null], [null, null, null]]),
+        S('คาบ 27', 'บัตรคำถามคลินิกผู้เชี่ยวชาญ'),
+        G(['สาขา', 'คำถามของเรา', 'คำตอบที่ได้', 'สิ่งที่จะทำต่อ'], rowsOf(['ฟิสิกส์', 'เคมี', 'ชีววิทยา', 'คณิต / คอม'], 3))
+      ] },
+      { id: 'u3w3', kind: 'w', code: 'ใบงาน 3.3', title: 'แผนและบันทึกการทดลอง', meta: 'กลุ่มเจาะลึก · คาบที่ 25–30 · ส่วนหนึ่งของ 8 คะแนน', intro: 'ส่วน ก ต้องให้ครูอนุมัติก่อนเริ่มทดลอง', blocks: [
+        S('ส่วน ก', 'แผนการทดลอง'),
+        G(['รายการ', 'รายละเอียด'], rowsOf(['ชื่อการทดลอง', 'สมมติฐาน (ถ้า... แล้ว...)', 'ตัวแปรต้น และระดับที่ใช้ (อย่างน้อย 5 ระดับ)', 'ตัวแปรตาม และวิธีวัด (พร้อมหน่วย)', 'ตัวแปรควบคุม (อย่างน้อย 3 ตัว) และวิธีทำให้คงที่', 'วัสดุอุปกรณ์', 'ข้อควรระวังด้านความปลอดภัย'], 1)),
+        S('ส่วน ข', 'ตารางบันทึกผล'),
+        G(['ตัวแปรต้น (หน่วย)', 'ครั้งที่ 1', 'ครั้งที่ 2', 'ครั้งที่ 3', 'ค่าเฉลี่ย', 'หมายเหตุ / สิ่งผิดปกติ'], [[null, null, null, null, null, null], [null, null, null, null, null, null], [null, null, null, null, null, null], [null, null, null, null, null, null], [null, null, null, null, null, null]]),
+        S('ส่วน ค', 'บันทึกการทดลองระยะยาว (รายวัน)'),
+        G(['วันที่ของการทดลอง', 'วันที่', 'ค่าที่วัด (หน่วย)', 'ข้อสังเกต', 'ผู้บันทึก'], rowsOf(['0', '1', '2', '3', '4', '5', '6', '7'], 4))
+      ] },
+      { id: 'u3w4', kind: 'w', code: 'ใบงาน 3.4', title: 'Mathematical Model ฉบับปรับปรุง', meta: 'กลุ่มเจาะลึก · คาบที่ 30 · ส่วนหนึ่งของ 8 คะแนน', intro: 'แนบกราฟจาก Google Sheets หรือวาดบนกระดาษกราฟ ให้มีชื่อกราฟและชื่อแกนพร้อมหน่วยครบ', blocks: [
+        F('ชนิด Model (Static / Linear / Stochastic)', 1),
+        G(['ขั้น', 'คำถามนำ', 'คำตอบของกลุ่ม'], [['Ask', 'คำถามที่ Model นี้ตอบ', null], ['Select', 'ตัวแปรที่ใช้ (พร้อมหน่วย) และสิ่งที่ตัดออกพร้อมเหตุผล', null], ['Formulate', 'สมการ หรือค่าสรุป (ค่าเฉลี่ย ช่วง สัดส่วน)', null], ['Solve', 'ค่าที่ได้จาก Google Sheets: m, c, R² หรือ ค่าเฉลี่ย / ต่ำสุด / สูงสุด', null], ['Validate', 'ค่าทำนาย · ค่าที่วัดได้ · ความคลาดเคลื่อน % · ใช้ได้ในช่วงไหน ใช้ไม่ได้เมื่อไร', null]]),
+        F('Model ใหม่ดีกว่า Model จากหน่วยที่ 2 อย่างไร (2 ประโยค)', 3)
+      ] },
+      { id: 'u3w5', kind: 'w', code: 'ใบงาน 3.5', title: 'ต้นไม้ปัญหา–โอกาส', meta: 'กลุ่มเจาะลึก · คาบที่ 31–32 · 4 คะแนน', blocks: [
+        F('ปัญหา / โอกาส ของเรา (ระบุว่าเป็นปัญหาหรือโอกาส)', 2),
+        G(['ส่วนของต้นไม้', 'เนื้อหา', 'หลักฐานจากข้อมูลของกลุ่ม'], rowsOf(['กิ่ง: ผลกระทบที่ 1', 'กิ่ง: ผลกระทบที่ 2', 'ลำต้น: ปัญหาหรือโอกาส', 'ราก: สาเหตุที่ 1', 'ราก: สาเหตุที่ 2', 'ราก: สาเหตุที่ 3 (ถ้ามี)'], 2)),
+        F('ใครได้ประโยชน์ถ้าแก้ปัญหานี้หรือใช้โอกาสนี้ได้ และมากแค่ไหน', 2),
+        F('ลานจอดไอเดีย (วิธีแก้ที่คิดได้ เก็บไว้ใช้หน่วยที่ 4)', 3),
+        F('Feedback จาก Science Café ที่จะนำไปปรับ', 2),
+        S('รายบุคคล', 'สะท้อนผล'),
+        F('สิ่งที่ฉันเข้าใจเปลี่ยนไปมากที่สุดคือ...', 2),
+        F('ถ้าทำโครงงาน ฉันอยากรับผิดชอบส่วน... เพราะ...', 2)
+      ] },
+      { id: 'u3q', kind: 'q', code: 'ทดสอบหลังเรียน', title: 'หน่วยที่ 3 วิทยาศาสตร์เชื่อมภูมิปัญญา', meta: '10 ข้อ · ส่งแล้วดูเฉลยได้ทันที', qs: [
+        { lv: 'จำ', q: 'ชั้นที่ 3 ของ Mind Map S-T-E-A-M × ภูมิปัญญา คืออะไร', o: ['ชื่อภูมิปัญญา', '5 ศาสตร์ S-T-E-A-M', 'แนวคิดหรือหลักการ', 'หลักฐาน เช่น ตัวเลข ภาพ หรือคำพูดของปราชญ์'], a: 3, ex: 'กลาง = ชื่อภูมิปัญญา · ชั้น 1 = 5 ศาสตร์ · ชั้น 2 = แนวคิด · ชั้น 3 = หลักฐานที่ยืนยันแนวคิด' },
+        { lv: 'เข้าใจ', q: 'เส้นเชื่อมข้ามศาสตร์ที่ถูกต้องต้องมีลักษณะอย่างไร', o: ['ลากจากกลางไปยังทุกศาสตร์', 'ลากระหว่างกล่องที่อยู่ต่างศาสตร์ และเขียนคำกริยากำกับเส้น', 'ลากระหว่างกล่องในศาสตร์เดียวกัน', 'ใช้สีเดียวกันทั้งหมด'], a: 1, ex: 'คำกริยา เช่น ทำให้ · วัดได้ด้วย · นำไปคำนวณ แสดงว่าศาสตร์ทำงานร่วมกันอย่างไร' },
+        { lv: 'จำ', q: 'วงสีแดงใน Mind Map หมายถึงอะไร', o: ['จุดที่สำคัญที่สุด', 'จุดที่ยังไม่มีหลักฐาน', 'จุดที่ปราชญ์ไม่อนุญาตให้เผยแพร่', 'จุดที่ผิด'], a: 1, ex: 'วงแดงคือจุดที่ยังไม่มีหลักฐาน เมื่อหาหลักฐานได้จากคลินิก การทดลอง หรือการค้นคว้า ให้เปลี่ยนเป็นวงเขียว' },
+        { lv: 'นำไปใช้', q: 'ตัวแปรต้นอยู่ในคอลัมน์ A2:A7 และค่าเฉลี่ยอยู่ใน E2:E7 จะหาความชันของเส้นตรงด้วยสูตรใด', o: ['=SLOPE(A2:A7, E2:E7)', '=SLOPE(E2:E7, A2:A7)', '=AVERAGE(E2:E7)', '=INTERCEPT(E2:E7, A2:A7)'], a: 1, ex: 'SLOPE ใส่ค่า y (ตัวแปรตาม) ก่อน แล้วตามด้วยค่า x (ตัวแปรต้น) ส่วน INTERCEPT ใช้หาจุดตัดแกน y' },
+        { lv: 'เข้าใจ', q: 'กราฟข้อมูลการทดลองมีค่า R² = 0.32 ข้อใดสรุปได้ถูกต้องที่สุด', o: ['การทดลองผิดพลาดทั้งหมด', 'จุดข้อมูลไม่เกาะเส้นตรง ควรตรวจตัวแปรควบคุมหรือพิจารณา Model ชนิดอื่น', 'ความชันเท่ากับ 0.32', 'ตัวแปรต้นและตัวแปรตามมีความสัมพันธ์เป็นเส้นตรงแน่นอน'], a: 1, ex: 'R² ใกล้ 0 แปลว่าข้อมูลกระจาย ไม่เป็นเส้นตรง ไม่ได้แปลว่าการทดลองผิดทั้งหมด' },
+        { lv: 'นำไปใช้', q: 'Model ทำนายความเข้มสีได้ 50 แต่วัดได้จริง 40 ความคลาดเคลื่อนเป็นกี่เปอร์เซ็นต์', o: ['10%', '20%', '25%', '50%'], a: 2, ex: '|50 − 40| ÷ 40 × 100 = 25% ซึ่งเกิน 10% จึงควรตรวจสอบหรือจำกัดช่วงที่ใช้ Model' },
+        { lv: 'เข้าใจ', q: 'สำหรับงานระดับนี้ ความคลาดเคลื่อนไม่เกินเท่าใดจึงถือว่า Model ใช้ทำนายในช่วงนั้นได้ดี', o: ['ประมาณ 1%', 'ประมาณ 10%', 'ประมาณ 30%', 'ประมาณ 50%'], a: 1, ex: 'ใบความรู้ 3.2 ใช้เกณฑ์ประมาณ 10%' },
+        { lv: 'นำไปใช้', q: 'ถ้าข้อมูลเป็น Stochastic Model ควรนำเสนอใน Google Sheets อย่างไร', o: ['ลากเส้นแนวโน้มเส้นตรงและแสดง R²', 'ทำตารางค่าเฉลี่ย ต่ำสุด สูงสุดของแต่ละวัน แล้วทำกราฟเส้นของค่าเฉลี่ยพร้อมเขียนช่วงกำกับ', 'แสดงเฉพาะค่าที่สูงที่สุด', 'ไม่ต้องทำกราฟ'], a: 1, ex: 'Stochastic Model เน้นค่าเฉลี่ยและช่วงที่เป็นไปได้ ไม่ต้องลากเส้นตรง' },
+        { lv: 'วิเคราะห์', q: '“ใบไม้บางชนิดถูกทิ้งทั้งที่ยังใช้พิมพ์ผ้าได้” เป็นปัญหาหรือโอกาส', o: ['ปัญหา เพราะทำให้ภูมิปัญญาเสียหาย', 'โอกาส เพราะเป็นสิ่งที่ถูกทิ้งทั้งที่ยังใช้ได้ ถ้าทำจะเพิ่มคุณค่า', 'ปัญหา เพราะผู้สืบทอดบ่น', 'ไม่ใช่ทั้งสองอย่าง'], a: 1, ex: 'คำถามชวนคิดเรื่องโอกาสคือ “อะไรถูกทิ้งทั้งที่ยังใช้ได้ อะไรที่ยังวัดไม่ได้”' },
+        { lv: 'ประเมินค่า', q: 'ข้อใดเป็นลำต้นของต้นไม้ปัญหา–โอกาสที่ “พอดี” ที่สุด', o: ['ผ้าทอลองขายไม่ได้', 'ภูมิปัญญากำลังจะหายไป', 'สีขมิ้นบนผ้าฝ้ายซีดลงชัดเจนหลังซัก 3 ครั้ง ถ้าไม่ใช้สารช่วยติดสี', 'คนรุ่นใหม่ไม่สนใจผ้าทอ'], a: 2, ex: 'ประเด็นที่ดีต้องแคบพอทำได้จริงใน 1 ปี มีหลักฐานที่เราวัดเอง และผู้สืบทอดได้ประโยชน์จริง ข้ออื่นกว้างเกินไป' }
+      ] }
+    ]
+  },
+  {
+    id: 'u4', no: 4, title: 'ได้โจทย์แล้ว — หัวข้อโครงงานของฉัน', hours: 6, periods: 'คาบที่ 33–40', weight: '15% + สอบปลายภาค 15%',
+    short: 'เปลี่ยนปัญหาหรือโอกาสเป็นหัวข้อโครงงานด้วย M.I.C. Model เขียนเค้าโครง และ Pitch บนเวทีพลังสิบจำลอง',
+    items: [
+      { id: 'u4o', kind: 'o', code: 'ภาพรวม', title: 'เป้าหมายและแผนการเรียน', meta: 'อ่านก่อนเริ่มหน่วย', blocks: [
+        P('หน่วยสุดท้ายของภาคเรียน เราจะเปลี่ยนต้นไม้ปัญหา–โอกาสจากหน่วยที่ 3 ให้เป็นหัวข้อโครงงานของทีม ภายใน 6 คาบต้องได้เค้าโครงที่พร้อมเริ่มเขียนบทที่ 1–3 ใน ม.5'),
+        H('เมื่อจบหน่วย ฉันจะสามารถ'),
+        L(['ประยุกต์ใช้ M.I.C. Model (Modify / Improve / Create) เพื่อกำหนดหัวข้อโครงงานที่เชื่อมโยงกับชุมชนได้', 'เขียนเค้าโครงหัวข้อโครงงานเบื้องต้นได้ ครอบคลุมที่มา วัตถุประสงค์ และแนวทางดำเนินการ', 'รับและให้ Feedback หัวข้อโครงงานของเพื่อนได้อย่างสร้างสรรค์', 'ตระหนักถึงจริยธรรมการทำโครงงานกับชุมชน และให้เกียรติเจ้าของภูมิปัญญา']),
+        H('เส้นทางของทีมโครงงาน'),
+        T(['ช่วง', 'สิ่งที่ทีมทำ'], [['ม.4 ภาคเรียนที่ 2 (หน่วยนี้)', 'ได้หัวข้อ + เค้าโครง'], ['ม.5 ภาคเรียนที่ 1 (ว32285)', 'เขียนโครงงานบทที่ 1–3'], ['ม.5 ภาคเรียนที่ 2 (ว32286)', 'บทที่ 4–5 และขึ้นเวทีพลังสิบ ก.พ.–มี.ค.'], ['ม.6 ภาคเรียนที่ 1 (ว33285)', 'Abstract, Scientific Poster, Portfolio TCAS']]),
+        H('แผนการเรียน คาบที่ 33–40'),
+        T(['คาบ', 'ชื่อคาบ', 'สิ่งที่เราจะทำ', 'ใช้'], [['33', 'M.I.C. แตกไอเดีย', 'แตกไอเดีย Modify, Improve, Create จากต้นไม้ปัญหา–โอกาส', 'ใบความรู้ 4.1 · ใบงาน 4.1'], ['34', 'เลือกหัวข้อ', 'ให้คะแนนไอเดียด้วยเกณฑ์ 5 ข้อ เลือก 1 หัวข้อ ตั้งชื่อโครงงาน', 'ใบความรู้ 4.2 · ใบงาน 4.2'], ['35', 'ค้นคว้าเบื้องต้น', 'ตรวจว่าเคยมีใครทำ ค้นแหล่งอ้างอิง 3 แหล่ง ถามเจ้าของภูมิปัญญา', 'ใบงาน 4.3'], ['36', 'เขียนเค้าโครง', 'ที่มา วัตถุประสงค์ สมมติฐาน ตัวแปร ขอบเขต วิธีดำเนินการ แผน ม.5', 'ใบความรู้ 4.3 · ใบงาน 4.4'], ['37', 'เวทีพลังสิบจำลอง', 'Pitch ทีมละ 3 นาที กรรมการครูและผู้แทนชุมชนให้ Feedback', 'ใบงาน 4.5'], ['38', 'ปรับปรุงและส่งต่อ', 'ปรับเค้าโครงตาม Feedback ส่งงาน สะท้อนผลทั้งภาคเรียน', 'ใบงาน 4.4 ฉบับสมบูรณ์'], ['39–40', 'สอบปลายภาค', 'ครอบคลุมทั้งรายวิชา เน้นหน่วยที่ 3–4', '—']]),
+        H('ชิ้นงานและคะแนน'),
+        T(['ชิ้นงาน', 'ใบงาน', 'คะแนน'], [['ไอเดีย M.I.C. และการเลือกหัวข้อด้วยเกณฑ์', '4.1, 4.2', '3'], ['เค้าโครงหัวข้อโครงงานฉบับสมบูรณ์', '4.3, 4.4', '9'], ['การ Pitch บนเวทีพลังสิบจำลอง', '4.5', '3'], ['สอบปลายภาค (ปรนัย 20 ข้อ + อัตนัย 2 ข้อ · 100 นาที)', '—', '15']])
+      ] },
+      { id: 'u4k1', kind: 'k', code: 'ใบความรู้ 4.1', title: 'M.I.C. Model เปลี่ยนปัญหาเป็นโครงงาน', meta: 'ใช้ในคาบที่ 33', blocks: [
+        P('M.I.C. Model คือเครื่องมือวิศวกรสังคมชิ้นสุดท้ายของเรา ใช้ตอบคำถามว่า “เราจะทำอะไรกับปัญหาหรือโอกาสที่เจอ”'),
+        T(['', 'Modify ดัดแปลง', 'Improve ปรับปรุง', 'Create สร้างใหม่'], [['ทำอะไร', 'เปลี่ยนวิธีหรือวัตถุดิบเดิมบางส่วน', 'ทำให้ดีขึ้นอย่างวัดได้', 'สร้างสิ่งที่ยังไม่มี'], ['ถามตัวเองว่า', 'ถ้าเปลี่ยนสิ่งนี้ 1 อย่าง จะเป็นอย่างไร', 'ดีขึ้นกี่เปอร์เซ็นต์ วัดอย่างไร', 'ใครจะใช้ ใช้แล้วดีกว่าเดิมอย่างไร'], ['ตัวอย่าง (Eco Printing)', 'ลองใช้ใบไม้ท้องถิ่นชนิดใหม่', 'ทำให้ได้สีที่ต้องการทุกครั้งด้วยตารางเวลานึ่ง', 'การ์ดเทียบสีที่ทำนายสีก่อนนึ่ง']]),
+        N('M.I.C. ไม่ได้เรียงจากแย่ไปดี โครงงานที่ดีที่สุดคือโครงงานที่ทำเสร็จจริง วัดได้จริง และมีคนได้ประโยชน์จริง', 'จำไว้: '),
+        H('กติกาการแตกไอเดีย'),
+        L(['ยังไม่ตัดสินว่าไอเดียไหนดี เขียนให้มากที่สุดก่อน', '1 โพสต์อิท = 1 ไอเดีย', 'ต่อยอดไอเดียของเพื่อนได้', 'ทุกไอเดียต้องเริ่มจากต้นไม้ปัญหา–โอกาสของเรา'])
+      ] },
+      { id: 'u4k2', kind: 'k', code: 'ใบความรู้ 4.2', title: 'เลือกหัวข้ออย่างนักวิจัย', meta: 'ใช้ในคาบที่ 34', blocks: [
+        P('ให้คะแนนไอเดียแต่ละข้อ เกณฑ์ละ 1–3 คะแนน (1 = น้อย, 3 = มาก)'),
+        T(['เกณฑ์', 'ได้ 3 คะแนน เมื่อ'], [['มีหลักฐานรองรับ', 'มีข้อมูลที่เราวัดเองยืนยันว่าปัญหาหรือโอกาสนี้มีจริง'], ['ทำได้จริง', 'ทำเสร็จใน ม.5 ด้วยอุปกรณ์ที่โรงเรียนมีหรือหาได้ไม่แพง'], ['วัดผลได้', 'มีตัวแปรตามที่วัดเป็นตัวเลขได้ชัดเจน'], ['เป็นประโยชน์ต่อชุมชน', 'ผู้สืบทอดภูมิปัญญาบอกว่าอยากได้ผลนี้'], ['มีความใหม่', 'ยังไม่มีใครทำในบริบทของอำเภอลอง']]),
+        X('[การศึกษา / การเปรียบเทียบ / การพัฒนา] + [ผลของ ... ต่อ ...] + [เพื่อ ...]', 'สูตรตั้งชื่อโครงงาน  '),
+        P('การศึกษาผลของสารส้มต่อความทนการซักของผ้าฝ้ายย้อมขมิ้น เพื่อลดการซีดของผ้าทอเมืองลอง', 'ตัวอย่าง: '),
+        X('ถ้า [ตัวแปรต้น] เปลี่ยนไป [ตัวแปรตาม] จะเปลี่ยนไปอย่างไร', 'คำถามวิจัยหลัก  ')
+      ] },
+      { id: 'u4k3', kind: 'k', code: 'ใบความรู้ 4.3', title: 'เค้าโครงโครงงาน 10 ส่วน', meta: 'ใช้ในคาบที่ 36 และ 38', blocks: [
+        T(['ส่วน', 'เขียนอะไร', 'เอาข้อมูลมาจาก'], [['1. ชื่อโครงงาน', 'ไทยและอังกฤษ', 'ใบงาน 4.2'], ['2. ประเภท M.I.C. และแหล่ง', 'M / I / C และแหล่งภูมิปัญญา', 'ใบงาน 4.2'], ['3. ที่มาและความสำคัญ', '2–3 ย่อหน้า จบด้วยปัญหาพร้อมตัวเลข', 'ใบงาน 3.5, Field Report'], ['4. วัตถุประสงค์', '2–3 ข้อ ใช้คำกริยาที่วัดได้', 'คำถามวิจัยในใบงาน 4.2'], ['5. สมมติฐาน', 'ถ้า... แล้ว... จะ...', 'ใบงาน 3.3'], ['6. ตัวแปร', 'ต้น ตาม ควบคุม', 'ใบงาน 3.3–3.4'], ['7. ขอบเขต', 'ทำอะไร ไม่ทำอะไร ที่ไหน กับใคร', 'การตัดสินใจของทีม'], ['8. วิธีดำเนินการและอุปกรณ์', 'ขั้นตอนโดยย่อ จำนวนซ้ำ รายการอุปกรณ์', 'ใบงาน 3.3'], ['9. ประโยชน์ที่คาดว่าจะได้รับ', 'ต่อชุมชนและต่อวิทยาศาสตร์', 'ใบงาน 3.5, ความเห็นปราชญ์'], ['10. แผนงาน ม.5 และเอกสารอ้างอิง', 'ตารางรายเดือน อ้างอิง 3 แหล่ง', 'ใบงาน 4.3']]),
+        X('ผู้แต่ง. (ปีที่พิมพ์). ชื่อเรื่อง. ชื่อวารสารหรือแหล่งที่มา. ลิงก์ (ถ้ามี)', 'รูปแบบการเขียนอ้างอิง  '),
+        N('ระบุชื่อผู้ให้ข้อมูลหรือกลุ่มภูมิปัญญาในกิตติกรรมประกาศ (เมื่อท่านอนุญาต) และไม่ใส่สูตรหรือเทคนิคที่ท่านไม่ต้องการเปิดเผย', 'อย่าลืม: ')
+      ] },
+      { id: 'u4w1', kind: 'w', code: 'ใบงาน 4.1', title: 'แตกไอเดีย M.I.C.', meta: 'ทีมโครงงาน · คาบที่ 33 · ส่วนหนึ่งของ 3 คะแนน', intro: 'เขียนไอเดียอย่างน้อยแบบละ 2 ไอเดีย แล้วทำเครื่องหมาย ★ หน้าไอเดียที่ทีมชอบที่สุด 3 ไอเดีย', blocks: [
+        F('ปัญหา / โอกาสจากใบงาน 3.5', 2),
+        G(['ที่', 'Modify ดัดแปลง', 'Improve ปรับปรุง', 'Create สร้างใหม่'], nums(3, 3)),
+        F('ไอเดียที่ได้จากทีมอื่น', 2)
+      ] },
+      { id: 'u4w2', kind: 'w', code: 'ใบงาน 4.2', title: 'เลือกหัวข้อด้วยเกณฑ์', meta: 'ทีมโครงงาน · คาบที่ 34 · ส่วนหนึ่งของ 3 คะแนน', intro: 'ให้คะแนนไอเดียที่ติด ★ เกณฑ์ละ 1–3 คะแนน และเขียนหลักฐานสั้น ๆ ในวงเล็บ', blocks: [
+        G(['เกณฑ์', 'ไอเดีย ★1', 'ไอเดีย ★2', 'ไอเดีย ★3'], rowsOf(['ชื่อไอเดีย', 'มีหลักฐานรองรับ', 'ทำได้จริง', 'วัดผลได้', 'เป็นประโยชน์ต่อชุมชน', 'มีความใหม่', 'รวม (เต็ม 15)'], 3)),
+        F('หัวข้อที่เลือก และประเภท (M / I / C)', 1),
+        F('เหตุผลที่เลือก (ถ้าไม่ใช่ไอเดียที่คะแนนสูงสุด ให้อธิบาย)', 3),
+        F('ชื่อโครงงาน 3 แบบ และชื่อที่เลือก', 4),
+        F('คำถามวิจัยหลัก: ถ้า... แล้ว... จะเปลี่ยนไปอย่างไร', 2)
+      ] },
+      { id: 'u4w3', kind: 'w', code: 'ใบงาน 4.3', title: 'ค้นคว้าเบื้องต้นและเสียงจากเจ้าของภูมิปัญญา', meta: 'ทีมโครงงาน · คาบที่ 35 · ส่วนหนึ่งของ 9 คะแนน', blocks: [
+        S('ตอนที่ 1', 'แหล่งอ้างอิง 3 แหล่ง'),
+        G(['ที่', 'การอ้างอิง (ผู้แต่ง. ปี. ชื่อเรื่อง. แหล่งที่มา. ลิงก์)', 'สรุปด้วยคำของเรา (2–3 บรรทัด)', 'งานนี้ต่างจากโครงงานของเราอย่างไร'], nums(3, 3)),
+        S('ตอนที่ 2', 'ถามเจ้าของภูมิปัญญา'),
+        F('ผู้ให้ความเห็น · วันที่ · วิธีติดต่อ (โทร / ครูถามแทน)', 1),
+        G(['คำถาม', 'คำตอบ'], rowsOf(['1. ถ้าเราศึกษาเรื่องนี้ จะเป็นประโยชน์กับการทำงานของท่านไหม อย่างไร', '2. มีอะไรที่เราควรระวัง หรือไม่ควรเปลี่ยน', '3. ท่านยินดีให้เราใช้ชื่อหรือข้อมูลของท่าน และให้คำแนะนำตอนเราทำโครงงานไหม'], 1)),
+        F('การตัดสินใจของทีม (คงหัวข้อ / ปรับหัวข้อ / เปลี่ยนหัวข้อ) เพราะ...', 2)
+      ] },
+      { id: 'u4w4', kind: 'w', code: 'ใบงาน 4.4', title: 'เค้าโครงโครงงาน', meta: 'ทีมโครงงาน · คาบที่ 36–38 · 9 คะแนน', intro: 'เขียนเค้าโครงฉบับเต็มใน Google Docs ของทีมตามใบความรู้ 4.3 แล้วใช้หน้านี้แบ่งงานและติดตามความคืบหน้า', blocks: [
+        G(['ส่วน', 'ผู้รับผิดชอบ', 'สถานะ'], rowsOf(['1. ชื่อโครงงาน (ไทย / อังกฤษ)', '2. ประเภท M.I.C. และแหล่งภูมิปัญญา', '3. ที่มาและความสำคัญ', '4. วัตถุประสงค์', '5. สมมติฐาน', '6. ตัวแปรต้น ตัวแปรตาม ตัวแปรควบคุม', '7. ขอบเขต', '8. วิธีดำเนินการและอุปกรณ์', '9. ประโยชน์ที่คาดว่าจะได้รับ', '10. แผนงาน ม.5 และเอกสารอ้างอิง'], 2)),
+        S('ส่วนที่ 10', 'แผนงาน ม.5'),
+        G(['ช่วงเวลา', 'งานที่ทำ', 'ผู้รับผิดชอบ'], [['ม.5 ภาคเรียนที่ 1 ช่วงต้น', 'ทบทวนเอกสาร เขียนบทที่ 1–2', null], ['ม.5 ภาคเรียนที่ 1 ช่วงกลาง', 'เตรียมอุปกรณ์ ทดลองนำร่อง เขียนบทที่ 3', null], ['ม.5 ภาคเรียนที่ 1 ช่วงปลาย', 'ทดลองจริง เก็บข้อมูลรอบแรก', null], ['ม.5 ภาคเรียนที่ 2 ช่วงต้น', 'ทดลองซ้ำ วิเคราะห์ข้อมูล', null], ['ธ.ค.–ม.ค.', 'เขียนบทที่ 4–5 ให้ครบ', null], ['ก.พ.–มี.ค.', 'ขึ้นเวทีพลังสิบ', null]]),
+        K('Checklist ก่อนส่ง', ['วัตถุประสงค์ทุกข้อตอบได้ด้วยวิธีดำเนินการที่เขียนไว้', 'ตัวแปรตามวัดเป็นตัวเลขได้', 'สมมติฐานมีทิศทาง (มากขึ้น / น้อยลง)', 'ระบุจำนวนการทำซ้ำ', 'มีอ้างอิง 3 แหล่งขึ้นไป เขียนถูกรูปแบบ', 'ให้เครดิตผู้ให้ข้อมูลตามที่ได้รับอนุญาต']),
+        S('คาบ 38', 'สิ่งที่ปรับตาม Feedback จากเวทีจำลอง'),
+        G(['Feedback ที่ได้รับ (จากใคร)', 'สิ่งที่ทีมปรับ'], [[null, null], [null, null], [null, null]])
+      ] },
+      { id: 'u4w5', kind: 'w', code: 'ใบงาน 4.5', title: 'Pitch บนเวทีพลังสิบจำลอง', meta: 'ทีมโครงงาน · คาบที่ 37 · 3 คะแนน', intro: 'ทีมละ 3 นาที วางแผนว่าใครพูดช่วงไหน ใช้การ์ดโน้ตเฉพาะหัวข้อ ไม่ใช่บทเต็ม และซ้อมจับเวลาอย่างน้อย 2 รอบ', blocks: [
+        G(['เวลา', 'พูดเรื่อง', 'ผู้พูด'], [['0:00–0:30', 'เปิดด้วยภาพหรือตัวเลขที่ทำให้ผู้ฟังสนใจ', null], ['0:30–1:15', 'ปัญหาหรือโอกาส พร้อมหลักฐานจากข้อมูลของเรา', null], ['1:15–2:15', 'หัวข้อ ประเภท M.I.C. วัตถุประสงค์ และวิธีวัดความสำเร็จ', null], ['2:15–3:00', 'ชุมชนได้อะไร และแผนใน ม.5', null]]),
+        S('หลังเวที', 'Feedback ที่ทีมได้รับ'),
+        G(['ประเด็น', 'ความเห็นที่ได้รับ'], rowsOf(['สิ่งที่ผู้ฟังชอบที่สุด', 'คำถามที่ยังค้างใจ', 'ข้อเสนอแนะที่จะทำให้โครงงานดีขึ้น'], 1))
+      ] },
+      { id: 'u4q', kind: 'q', code: 'ทดสอบหลังเรียน', title: 'หน่วยที่ 4 หัวข้อโครงงานของฉัน', meta: '10 ข้อ · ทบทวนก่อนสอบปลายภาค', qs: [
+        { lv: 'เข้าใจ', q: 'หัวข้อใดเป็นโครงงานแบบ Improve', o: ['การทำกระถางต้นไม้จากเศษไม้ไผ่', 'การลดการซีดของผ้าย้อมขมิ้นด้วยสารส้ม', 'การใช้ใบมะยมแทนใบสักใน Eco Printing', 'การสร้างแอปเทียบสีผ้า'], a: 1, ex: 'Improve คือทำให้สิ่งเดิมดีขึ้นอย่างวัดได้ ส่วนกระถางและแอปเป็น Create และการเปลี่ยนชนิดใบไม้เป็น Modify' },
+        { lv: 'เข้าใจ', q: '“ลองใช้ใบไม้ท้องถิ่นชนิดใหม่ใน Eco Printing” เป็นไอเดียแบบใด', o: ['Modify ดัดแปลง', 'Improve ปรับปรุง', 'Create สร้างใหม่', 'ไม่ใช่ M.I.C.'], a: 0, ex: 'Modify คือเปลี่ยนวิธีหรือวัตถุดิบเดิมบางส่วน' },
+        { lv: 'เข้าใจ', q: 'ข้อใดกล่าวถึง M.I.C. Model ได้ถูกต้อง', o: ['Create ดีที่สุดเสมอเพราะสร้างสิ่งใหม่', 'M.I.C. เรียงจากแย่ไปดี', 'M.I.C. ไม่ได้เรียงจากแย่ไปดี โครงงานที่ดีคือทำเสร็จจริง วัดได้จริง มีคนได้ประโยชน์จริง', 'Modify ใช้ได้เฉพาะแหล่งไม้ไผ่'], a: 2, ex: 'ทั้งสามแบบมีคุณค่าเท่ากัน สิ่งที่ตัดสินคือทำได้จริง วัดได้จริง และเป็นประโยชน์จริง' },
+        { lv: 'วิเคราะห์', q: 'วัตถุประสงค์ข้อใดเขียนได้เหมาะสมที่สุด', o: ['เพื่อส่งเสริมภูมิปัญญาขนมจีนน้ำย้อย', 'เพื่อให้รู้เกี่ยวกับการหมักข้าว', 'เพื่อเปรียบเทียบค่า pH ของน้ำหมักข้าวที่อุณหภูมิ 25 °C และ 35 °C', 'เพื่อให้ขนมจีนอร่อยขึ้น'], a: 2, ex: 'ใช้คำกริยาที่วัดได้ (เปรียบเทียบ) และระบุตัวแปรชัดเจน' },
+        { lv: 'ประเมินค่า', q: 'ปราชญ์ให้ข้อมูลสูตรสารช่วยติดสีแต่ขอไม่ให้เผยแพร่ ทีมควรทำอย่างไรกับรายงานโครงงาน', o: ['ใส่สูตรเต็มเพราะเป็นข้อมูลทางวิทยาศาสตร์', 'ใส่สูตรแต่ไม่ระบุชื่อปราชญ์', 'ไม่ใส่สูตร ระบุเพียงว่าได้รับความอนุเคราะห์ข้อมูล และใช้สารที่เปิดเผยได้ในการทดลอง', 'ยกเลิกโครงงาน'], a: 2, ex: 'เคารพเจ้าของภูมิปัญญา และยังทำโครงงานต่อได้' },
+        { lv: 'เข้าใจ', q: 'ข้อใด “ไม่ใช่” เกณฑ์เลือกหัวข้อโครงงาน 5 ข้อ', o: ['มีหลักฐานรองรับ', 'วัดผลได้', 'ใช้อุปกรณ์ราคาแพงเพื่อให้น่าเชื่อถือ', 'มีความใหม่ในบริบทอำเภอลอง'], a: 2, ex: 'เกณฑ์ “ทำได้จริง” ต้องการอุปกรณ์ที่โรงเรียนมีหรือหาได้ไม่แพง เกณฑ์ทั้ง 5 คือ หลักฐาน · ทำได้จริง · วัดผลได้ · ประโยชน์ต่อชุมชน · ความใหม่' },
+        { lv: 'นำไปใช้', q: 'สมมติฐานข้อใดเขียนได้ดีที่สุด', o: ['สารส้มมีผลต่อผ้า', 'ถ้าความเข้มข้นของสารส้มเพิ่มขึ้น ความเข้มสีหลังซักจะลดลงน้อยลง', 'ผ้าย้อมขมิ้นสวยงาม', 'สารส้มอาจจะช่วยหรือไม่ช่วยก็ได้'], a: 1, ex: 'สมมติฐานที่ดีอยู่ในรูป ถ้า... แล้ว... และมีทิศทาง (มากขึ้น / น้อยลง)' },
+        { lv: 'จำ', q: 'ส่วน “ที่มาและความสำคัญ” ของเค้าโครงควรจบด้วยอะไร', o: ['ประวัติอำเภอลอง', 'ปัญหาพร้อมตัวเลข', 'รายชื่อสมาชิก', 'เอกสารอ้างอิง'], a: 1, ex: 'เขียน 2–3 ย่อหน้า และจบด้วยปัญหาพร้อมตัวเลขจากข้อมูลที่ทีมวัดเอง' },
+        { lv: 'จำ', q: 'รูปแบบการเขียนอ้างอิงอย่างง่ายข้อใดถูกต้อง', o: ['ชื่อเรื่อง. ผู้แต่ง. ลิงก์', 'ผู้แต่ง. (ปีที่พิมพ์). ชื่อเรื่อง. ชื่อวารสารหรือแหล่งที่มา. ลิงก์', 'ลิงก์อย่างเดียวก็พอ', 'ปีที่พิมพ์. ชื่อเรื่อง'], a: 1, ex: 'ผู้แต่ง. (ปีที่พิมพ์). ชื่อเรื่อง. ชื่อวารสารหรือแหล่งที่มา. ลิงก์ (ถ้ามี)' },
+        { lv: 'นำไปใช้', q: 'ในการ Pitch 3 นาที ช่วง 0:00–0:30 ควรพูดเรื่องใด', o: ['แผนงานใน ม.5', 'วิธีวัดความสำเร็จ', 'เปิดด้วยภาพหรือตัวเลขที่ทำให้ผู้ฟังสนใจ', 'ขอบคุณกรรมการ'], a: 2, ex: 'ช่วงเปิดต้องดึงความสนใจ แล้วตามด้วยปัญหา–หลักฐาน หัวข้อ–วิธีวัด และประโยชน์ต่อชุมชน–แผน ม.5' }
+      ] }
+    ]
+  }
+  ];
+  var sources = [
+    { no: 1, name: 'ไม้เสียบลูกชิ้นและตะเกียบจากไม้ไผ่', periods: 'คาบที่ 5–8', science: 'สมบัติวัสดุ', model: 'Static Model', note: 'เส้นใยไผ่ ความชื้น และเหตุผลของการแช่ ต้ม ตาก ที่ทำให้ไม้ใช้งานได้นาน' },
+    { no: 2, name: 'Eco Printing กลุ่มแม่บ้านบ้านแม่ลาน', periods: 'คาบที่ 9–12', science: 'เคมีพืช', model: 'Linear Model', note: 'สารให้สีในใบไม้ สารช่วยติดสี และความสัมพันธ์ระหว่างเวลานึ่งกับความเข้มสี' },
+    { no: 3, name: 'ขนมจีนน้ำย้อยบ้านแม่ลาน', periods: 'คาบที่ 13–16', science: 'ชีววิทยาการหมัก', model: 'Stochastic Model', note: 'จุลินทรีย์ในการหมักข้าว pH ที่เปลี่ยนไป และผลที่ไม่เท่ากันทุกรอบ' },
+    { no: 4, name: 'ผ้าซิ่นตีนจก', periods: 'คาบที่ 17–20', science: 'ฟิสิกส์แสงและสี', model: 'Static Model', note: 'สีย้อมธรรมชาติ แสงและการซีดของสี และเรขาคณิตของลายจก' }
+  ];
+  var scores = [['หน่วยที่ 1 · Timeline + คำถามก่อนลงพื้นที่', 10], ['หน่วยที่ 2 · Field Report 4 แหล่ง + สังเคราะห์', 25], ['สอบกลางภาค', 15], ['หน่วยที่ 3 · Mind Map + Model + ต้นไม้ปัญหา–โอกาส', 20], ['หน่วยที่ 4 · เค้าโครงหัวข้อโครงงาน', 15], ['สอบปลายภาค', 15]];
+  return { units: units, sources: sources, scores: scores, SRC: SRC };
+}
+
+
+/* =========================================================
+   ตั้งค่า: วาง URL ของ Google Apps Script Web App (ลงท้ายด้วย /exec)
+   ========================================================= */
+var SCRIPT_URL = '';
+
+/* ========================================================= */
+var C = COURSE();
+var LET = ['ก', 'ข', 'ค', 'ง'];
+var STORE = 'w30252-platform-v1';
+var S = loadState();
+var sending = {};
+
+function defState() { return { done: {}, ans: {}, chk: {}, qa: {}, qc: {}, src: 0, student: { name: '', room: '', no: '', group: '' }, sent: {} }; }
+function loadState() { try { var d = defState(), o = JSON.parse(localStorage.getItem(STORE) || '{}'); for (var k in o) d[k] = o[k]; return d; } catch (e) { return defState(); } }
+var saveTimer;
+function save() { clearTimeout(saveTimer); saveTimer = setTimeout(function () { try { localStorage.setItem(STORE, JSON.stringify(S)); } catch (e) {} }, 200); }
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+function toast(msg) { var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(function () { t.classList.remove('show'); }, 3200); }
+function fmtTime(ts) { try { return new Date(ts).toLocaleString('th-TH', { dateStyle: 'medium', timeStyle: 'short' }); } catch (e) { return ''; } }
+var ICON_CHECK = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>';
+var ICON_ARROW = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+var ICON_BACK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>';
+
+/* ---------- routing: #/u/<เลขหน่วย>/<รหัสบทเรียน> ---------- */
+function route() {
+  var m = location.hash.match(/^#\/u\/(\d)(?:\/([\w-]+))?/);
+  if (!m) return { view: 'home' };
+  var ui = Math.max(0, Math.min(C.units.length - 1, parseInt(m[1], 10) - 1));
+  var items = C.units[ui].items, ii = 0;
+  if (m[2]) { for (var j = 0; j < items.length; j++) if (items[j].id === m[2]) ii = j; }
+  return { view: 'unit', ui: ui, ii: ii };
+}
+function link(ui, ii) { return '#/u/' + (ui + 1) + '/' + C.units[ui].items[ii].id; }
+function isDone(it) { return it.kind === 'q' ? !!S.qc[it.id] : !!S.done[it.id]; }
+function prefixOf(it) { return it.perSource ? it.id + '-s' + S.src : it.id; }
+function profileOk() { var p = S.student; return p.name && p.room && p.no; }
+
+function stats() {
+  var all = 0, d = 0, per = C.units.map(function (u) { var x = u.items.filter(isDone).length; all += u.items.length; d += x; return { d: x, n: u.items.length, pct: Math.round(x * 100 / u.items.length) }; });
+  return { per: per, pct: Math.round(d * 100 / all), any: d > 0 };
+}
+function firstOpen() { for (var k = 0; k < C.units.length; k++) for (var j = 0; j < C.units[k].items.length; j++) if (!isDone(C.units[k].items[j])) return link(k, j); return link(0, 0); }
+
+/* ---------- views ---------- */
+function header(r, st) {
+  var nav = '<a class="navbtn' + (r.view === 'home' ? ' on' : '') + '" href="#/">หน้าแรก</a>';
+  C.units.forEach(function (u, k) { nav += '<a class="navbtn' + (r.view === 'unit' && r.ui === k ? ' on' : '') + '" href="#/u/' + (k + 1) + '">หน่วยที่ ' + u.no + '</a>'; });
+  var who = profileOk() ? esc(S.student.name.split(' ')[0]) + ' · ' + esc(S.student.room) : 'ข้อมูลนักเรียน';
+  return '<header class="top"><div class="wrap">' +
+    '<a class="brand" href="#/"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="9" fill="#233A73"/><path d="M17 7 L27 17 L17 27 L7 17 Z" fill="none" stroke="#E2A42B" stroke-width="2"/><path d="M17 12 L22 17 L17 22 L12 17 Z" fill="#E2A42B"/></svg><span><b>วิทยาศาสตร์กับภูมิปัญญา</b><small>ว30252 · ห้องวิทยาศาสตร์พลังสิบ</small></span></a>' +
+    '<nav class="nav" aria-label="เมนูหลัก">' + nav +
+    '<button type="button" class="me" data-act="profile"><span>' + who + '</span><span class="bar" style="width:56px"><span style="width:' + st.pct + '%;background:var(--indigo)"></span></span><span>' + st.pct + '%</span></button>' +
+    '</nav></div></header>';
+}
+
+function home(st) {
+  var totalQ = 0; C.units.forEach(function (u) { u.items.forEach(function (it) { if (it.kind === 'q') totalQ += it.qs.length; }); });
+  var stats4 = [['4', 'หน่วยการเรียนรู้'], ['4', 'แหล่งภูมิปัญญา'], ['40', 'ชั่วโมงเรียน'], [String(totalQ), 'ข้อทดสอบหลังเรียน']].map(function (x) {
+    return '<div style="border-top:1px solid rgba(246,243,236,.18);padding-top:10px"><div style="font-size:22px;font-weight:700">' + x[0] + '</div><div style="font-size:13px;color:#C3C9DB">' + x[1] + '</div></div>';
+  }).join('');
+  var units = C.units.map(function (u, k) {
+    var s = st.per[k];
+    var cta = s.d === 0 ? 'เริ่มเรียนหน่วยนี้' : (s.d === s.n ? 'ทบทวนหน่วยนี้' : 'เรียนต่อ');
+    return '<article class="card" style="overflow:hidden;display:flex;flex-direction:column">' +
+      '<div style="background:var(--night);color:var(--paper);padding:20px 22px;display:flex;justify-content:space-between;gap:12px"><div><div style="font-size:13px;color:var(--sun-t);font-weight:600">หน่วยที่ ' + u.no + '</div><div class="serif" style="font-size:20px;font-weight:700;line-height:1.45">' + esc(u.title) + '</div></div><span class="serif" style="font-size:44px;font-weight:700;line-height:1;color:rgba(233,180,76,.35)" aria-hidden="true">' + u.no + '</span></div>' +
+      '<div class="jok-thin"></div>' +
+      '<div style="padding:18px 22px 22px;display:flex;flex-direction:column;gap:14px;flex:1">' +
+      '<p style="margin:0;font-size:14.5px;line-height:1.65;color:#3C4150">' + esc(u.short) + '</p>' +
+      '<div style="display:flex;flex-wrap:wrap;gap:6px"><span class="chip">' + u.hours + ' ชั่วโมง</span><span class="chip">' + esc(u.periods) + '</span><span class="chip sun">' + esc(u.weight) + '</span></div>' +
+      '<div style="margin-top:auto;display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted)"><span>เรียนแล้ว ' + s.d + ' จาก ' + s.n + ' บทเรียน</span><span>' + s.pct + '%</span></div><div class="bar"><span style="width:' + s.pct + '%;background:var(--indigo)"></span></div></div>' +
+      '<a class="btn btn-pri" href="#/u/' + (k + 1) + '">' + cta + '</a></div></article>';
+  }).join('');
+  var srcs = C.sources.map(function (s) {
+    return '<div class="card" style="padding:22px;display:flex;flex-direction:column;gap:12px"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:12.5px;font-weight:600;color:var(--muted)">แหล่งที่ ' + s.no + ' · ' + esc(s.periods) + '</span><span class="chip sun" style="font-weight:600">' + esc(s.model) + '</span></div><strong class="serif" style="font-size:19px;line-height:1.45">' + esc(s.name) + '</strong><span style="font-size:14.5px;color:var(--indigo);font-weight:600">' + esc(s.science) + '</span><p style="margin:0;font-size:14px;line-height:1.65;color:var(--muted)">' + esc(s.note) + '</p></div>';
+  }).join('');
+  var scores = C.scores.map(function (r) {
+    var c = r[0].indexOf('สอบ') === 0 ? 'var(--sun)' : 'var(--indigo)';
+    return '<div style="display:grid;grid-template-columns:minmax(0,1fr) 48px;gap:6px 14px;align-items:center"><span style="font-size:14.5px">' + esc(r[0]) + '</span><span style="font-size:15px;font-weight:700;text-align:right">' + r[1] + '</span><div class="bar" style="grid-column:1/-1;height:8px;background:var(--sand)"><span style="width:' + (r[1] * 4) + '%;background:' + c + '"></span></div></div>';
+  }).join('');
+  var steps = [['1', 'อ่านใบความรู้', 'สาระสำคัญเขียนด้วยภาษาของนักเรียน อ่านก่อนเข้าคาบหรือทบทวนหลังเรียน', 'var(--tint)', 'var(--indigo)'], ['2', 'ทำและส่งใบงาน', 'คิดเอง ทำเอง ใบงานไม่มีเฉลย กดส่งแล้วงานจะไปถึงครูทันที', 'var(--sun-bg)', 'var(--sun-fg)'], ['3', 'ทดสอบหลังเรียน', 'ตรวจความเข้าใจท้ายหน่วย ส่งคำตอบแล้วดูเฉลยพร้อมคำอธิบายได้ทันที', 'var(--ok-bg)', 'var(--ok)']].map(function (x) {
+    return '<div class="card step"><span class="num serif" style="background:' + x[3] + ';color:' + x[4] + '">' + x[0] + '</span><div style="display:flex;flex-direction:column;gap:4px"><strong style="font-size:16px">' + x[1] + '</strong><span style="font-size:14.5px;color:var(--muted);line-height:1.6">' + x[2] + '</span></div></div>';
+  }).join('');
+  return '<main>' +
+    '<section class="hero"><div class="wrap">' +
+    '<div style="flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:20px"><span class="pill">ม.4 ห้องวิทยาศาสตร์พลังสิบ · ภาคเรียนที่ 2/2569</span>' +
+    '<h1 class="serif">วิทยาศาสตร์<br>กับภูมิปัญญา</h1>' +
+    '<p style="margin:0;font-size:18px;line-height:1.75;color:#D9DDEA;max-width:600px">ภูมิปัญญาตอบว่า “ทำอย่างไร” ส่วนวิทยาศาสตร์ถามต่อว่า “ทำไม” และ “เท่าไร” เทอมนี้เราจะลงพื้นที่ 4 แหล่งภูมิปัญญาของอำเภอลอง แปลความรู้ของปราชญ์เป็นภาษาวิทยาศาสตร์ และพัฒนาจนได้หัวข้อโครงงานของตัวเอง</p>' +
+    '<div style="display:flex;flex-wrap:wrap;gap:12px;padding-top:4px"><a class="btn btn-sun" href="' + firstOpen() + '">' + (st.any ? 'เรียนต่อจากที่ค้างไว้' : 'เริ่มเรียนหน่วยที่ 1') + ICON_ARROW + '</a><a class="btn btn-light" href="#units" data-act="scroll">ดูเส้นทาง 4 หน่วย</a></div></div>' +
+    '<div style="flex:1 1 320px;min-width:0"><div class="prog-panel"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-size:14px;color:#C3C9DB">ความคืบหน้าของฉัน</span><span class="serif" style="font-size:40px;font-weight:700;color:var(--sun-t)">' + st.pct + '%</span></div><div class="bar" style="height:8px;background:rgba(246,243,236,.14)"><span style="width:' + st.pct + '%;background:var(--sun)"></span></div><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">' + stats4 + '</div></div></div>' +
+    '</div><div class="jok"></div></section>' +
+    '<section class="wrap" style="padding-top:48px"><div class="grid-auto">' + steps + '</div></section>' +
+    '<section id="units" class="wrap" style="padding-top:56px;display:flex;flex-direction:column;gap:24px"><div><div class="eyebrow">เส้นทางการเรียน 40 ชั่วโมง</div><h2 class="h2 serif">4 หน่วยการเรียนรู้</h2></div><div class="grid-auto" style="grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));gap:18px">' + units + '</div></section>' +
+    '<section class="wrap" style="padding-top:56px;display:flex;flex-direction:column;gap:24px"><div style="display:flex;flex-direction:column;gap:8px"><div class="eyebrow">ห้องเรียนที่มีชีวิตของเรา</div><h2 class="h2 serif">4 แหล่งภูมิปัญญาอำเภอลอง</h2><p style="margin:0;font-size:15.5px;color:var(--muted);line-height:1.7;max-width:720px">ทุกกลุ่มลงพื้นที่ครบทั้ง 4 แหล่ง แหล่งละ 4 คาบ (เตรียม → ลงพื้นที่ → สรุป) แต่ละแหล่งมีศาสตร์เด่นและชนิด Mathematical Model ของตัวเอง</p></div><div class="grid-auto">' + srcs + '</div></section>' +
+    '<section class="wrap" style="padding-top:56px;padding-bottom:72px"><div class="card" style="padding:28px;display:flex;flex-wrap:wrap;gap:32px"><div style="flex:1 1 280px;display:flex;flex-direction:column;gap:10px"><div class="eyebrow">การวัดผลรายวิชา</div><h2 class="serif" style="margin:0;font-size:28px">คะแนนเต็ม 100</h2><p style="margin:0;font-size:15px;line-height:1.7;color:var(--muted)">คะแนนส่วนใหญ่มาจากชิ้นงานกลุ่มที่ทำต่อเนื่องตลอดเทอม ครูปรับคะแนนรายบุคคลจากการสังเกตการทำงานกลุ่มและภาคสนาม</p></div><div style="flex:999 1 480px;min-width:0;display:flex;flex-direction:column;gap:12px">' + scores + '</div></div></section>' +
+    '</main>';
+}
+
+function blockHTML(b, bi, prefix) {
+  switch (b.t) {
+    case 'h': return '<h3 class="serif">' + esc(b.text) + '</h3>';
+    case 's': return '<div class="sec"><span>' + esc(b.tag) + '</span><strong>' + esc(b.text) + '</strong></div>';
+    case 'p': return '<p>' + (b.lead ? '<strong>' + esc(b.lead) + '</strong>' : '') + esc(b.text) + '</p>';
+    case 'note': return '<div class="note">' + (b.lead ? '<strong>' + esc(b.lead) + '</strong>' : '') + esc(b.text) + '</div>';
+    case 'x': return '<div class="formula">' + (b.lead ? '<b>' + esc(b.lead) + '</b>' : '') + esc(b.text) + '</div>';
+    case 'list': return '<ul>' + b.items.map(function (x) { return Array.isArray(x) ? '<li><strong>' + esc(x[0]) + '</strong>' + esc(x[1]) + '</li>' : '<li>' + esc(x) + '</li>'; }).join('') + '</ul>';
+    case 'table':
+      var n = b.head.length, rest = b.grid ? 170 : 140;
+      var cols = 'grid-template-columns:minmax(96px,.7fr)' + new Array(n).join(' minmax(' + rest + 'px,1fr)');
+      var h = '<div class="tbl-box"><div role="table" style="min-width:' + (96 + rest * (n - 1)) + 'px"><div role="row" class="tr th" style="' + cols + '">' + b.head.map(function (x) { return '<div role="columnheader" class="td">' + esc(x) + '</div>'; }).join('') + '</div>';
+      b.rows.forEach(function (r, ri) {
+        h += '<div role="row" class="tr" style="' + cols + '">' + r.map(function (c, ci) {
+          if (c === null) { var key = prefix + '-' + bi + '-' + ri + '-' + ci; return '<div role="cell" class="td in"><textarea class="inp" rows="2" data-key="' + key + '" aria-label="' + esc(b.head[ci] + ' แถวที่ ' + (ri + 1)) + '">' + esc(S.ans[key] || '') + '</textarea></div>'; }
+          return '<div role="cell" class="td' + (b.grid && ci === 0 ? ' lab' : '') + '">' + esc(c) + '</div>';
+        }).join('') + '</div>';
+      });
+      return h + '</div></div>';
+    case 'field':
+      var fk = prefix + '-f' + bi;
+      return '<div class="field"><label for="' + fk + '">' + esc(b.label) + '</label><textarea id="' + fk + '" class="inp" rows="' + b.rows + '" data-key="' + fk + '" placeholder="' + esc(b.ph) + '">' + esc(S.ans[fk] || '') + '</textarea></div>';
+    case 'check':
+      return '<div class="checks"><span style="font-size:13px;font-weight:700;color:var(--muted);padding:4px 0">' + esc(b.label) + '</span>' + b.items.map(function (t, ci) {
+        var ck = prefix + '-c' + bi + '-' + ci, on = !!S.chk[ck];
+        return '<button type="button" class="chk" data-act="chk" data-key="' + ck + '" aria-pressed="' + on + '"><span class="box' + (on ? ' on' : '') + '">' + (on ? ICON_CHECK : '') + '</span><span style="line-height:1.55">' + esc(t) + '</span></button>';
+      }).join('') + '</div>';
+  }
+  return '';
+}
+
+function sendStatus(key, kindWord) {
+  var sent = S.sent[key];
+  if (sending[key]) return '<span class="status">กำลังส่ง…</span>';
+  if (sent) return '<span class="status ok">ส่ง' + kindWord + 'ถึงครูแล้ว · ' + esc(fmtTime(sent)) + '</span>';
+  if (!SCRIPT_URL) return '<span class="status">ครูยังไม่ได้เปิดระบบส่งงาน ทำใบงานไว้ก่อนได้ ระบบจำคำตอบไว้ในเครื่องนี้</span>';
+  return '<span class="status">ยังไม่ได้ส่ง' + (profileOk() ? '' : ' · กรอกข้อมูลนักเรียนก่อนส่ง') + '</span>';
+}
+
+function quizHTML(u, it) {
+  var picks = S.qa[it.id] || {}, checked = !!S.qc[it.id], score = 0, answered = 0;
+  var qs = it.qs.map(function (q, qi) {
+    var sel = picks[qi]; if (sel !== undefined) answered++; var right = sel === q.a; if (checked && right) score++;
+    var opts = q.o.map(function (t, oi) {
+      var cls = 'opt', tag = '';
+      if (!checked && sel === oi) cls += ' sel';
+      if (checked && oi === q.a) { cls += ' right'; tag = '<span class="tag" style="color:var(--ok-fg)">คำตอบที่ถูก</span>'; }
+      if (checked && sel === oi && oi !== q.a) { cls += ' wrong'; tag = '<span class="tag" style="color:#7E241B">คำตอบของฉัน</span>'; }
+      return '<button type="button" class="' + cls + '" data-act="pick" data-q="' + qi + '" data-o="' + oi + '" aria-pressed="' + (sel === oi) + '"' + (checked ? ' disabled' : '') + '><span class="l">' + LET[oi] + '</span><span style="flex:1;padding-top:2px">' + esc(t) + '</span>' + tag + '</button>';
+    }).join('');
+    var ex = checked ? '<div class="ex ' + (right ? 'ok' : 'no') + '"><strong>' + (right ? 'ถูกต้อง —' : 'เฉลย ' + LET[q.a] + ' —') + '</strong> ' + esc(q.ex) + '</div>' : '';
+    return '<section class="card q"><div style="display:flex;gap:12px;align-items:flex-start"><span class="qno">' + (qi + 1) + '</span><div style="display:flex;flex-direction:column;gap:4px;padding-top:5px"><span style="font-size:12.5px;color:var(--muted)">ระดับ: ' + esc(q.lv) + '</span><strong style="font-size:16.5px;line-height:1.65">' + esc(q.q) + '</strong></div></div><div role="group" aria-label="ตัวเลือกข้อ ' + (qi + 1) + '" style="display:flex;flex-direction:column;gap:8px">' + opts + '</div>' + ex + '</section>';
+  }).join('');
+  var total = it.qs.length, pct = Math.round(score * 100 / total), pass = pct >= 80, key = 'quiz-' + it.id;
+  var res = '';
+  if (checked) {
+    res = '<div class="card" style="padding:24px 26px;display:flex;flex-direction:column;gap:18px">' +
+      '<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between"><div style="display:flex;gap:20px;align-items:center"><div class="ring" style="background:conic-gradient(' + (pass ? 'var(--ok)' : '#C0392B') + ' ' + (pct * 3.6) + 'deg,#EEEAE0 0deg)"><div><span class="serif" style="font-size:24px;font-weight:700;line-height:1">' + score + '</span><span style="font-size:12px;color:var(--muted)">จาก ' + total + '</span></div></div>' +
+      '<div style="display:flex;flex-direction:column;gap:4px"><strong style="font-size:19px;color:' + (pass ? 'var(--ok-fg)' : '#7E241B') + '">' + (pass ? 'ผ่านเกณฑ์ ' + pct + '% · เข้าใจดีมาก' : 'ได้ ' + pct + '% · ยังไม่ถึงเกณฑ์ 80%') + '</strong><span style="font-size:14.5px;color:var(--muted);line-height:1.6;max-width:460px">' + (pass ? 'อ่านคำอธิบายเฉลยของแต่ละข้อเพื่อทบทวนอีกครั้ง แล้วไปต่อที่หน่วยถัดไปได้เลย' : 'อ่านคำอธิบายเฉลยใต้แต่ละข้อ กลับไปทบทวนใบความรู้ของหน่วยนี้ แล้วลองทำใหม่อีกครั้ง') + '</span></div></div>' +
+      '<button type="button" class="btn btn-ghost noprint" data-act="retry">ทำแบบทดสอบใหม่</button></div>' +
+      '<div class="noprint" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:16px">' + sendStatus(key, 'คะแนน') +
+      (SCRIPT_URL && !S.sent[key] && !sending[key] ? '<button type="button" class="btn btn-pri" data-act="sendquiz">ส่งคะแนนให้ครู</button>' : '') + '</div></div>';
+  }
+  var foot = checked ? '' : '<div class="card sendbar noprint"><span class="status">ตอบแล้ว ' + answered + ' จาก ' + total + ' ข้อ · ตอบครบทุกข้อจึงส่งคำตอบได้</span><button type="button" class="btn btn-pri" data-act="submitquiz"' + (answered < total ? ' disabled' : '') + '>ส่งคำตอบและดูเฉลย</button></div>';
+  return '<div style="display:flex;flex-direction:column;gap:16px">' + res + qs + foot + '</div>';
+}
+
+function unitView(r, st) {
+  var u = C.units[r.ui], items = u.items, it = items[r.ii], prefix = prefixOf(it);
+  var groups = [['เริ่มต้น', 'o'], ['ใบความรู้', 'k'], ['ใบงาน', 'w'], ['ทดสอบหลังเรียน', 'q']].map(function (g) {
+    var list = items.map(function (x, j) { return { x: x, j: j }; }).filter(function (o) { return o.x.kind === g[1]; });
+    if (!list.length) return '';
+    return '<div style="display:flex;flex-direction:column;gap:4px"><span class="side-label">' + g[0] + '</span>' + list.map(function (o) {
+      var on = o.j === r.ii, dn = isDone(o.x);
+      return '<a class="side-item' + (on ? ' on' : '') + '" href="' + link(r.ui, o.j) + '"' + (on ? ' aria-current="page"' : '') + '><span class="dot' + (dn ? ' done' : '') + '">' + (dn ? ICON_CHECK : '') + '</span><span><small>' + esc(o.x.code) + '</small>' + esc(o.x.title) + '</span></a>';
+    }).join('') + '</div>';
+  }).join('');
+  var km = { o: ['ภาพรวมหน่วย', 'var(--tint)', 'var(--indigo)'], k: [it.code, 'var(--tint)', 'var(--indigo)'], w: [it.code, 'var(--sun-bg)', 'var(--sun-fg)'], q: ['ทดสอบหลังเรียน', 'var(--ok-bg)', 'var(--ok)'] }[it.kind];
+  var title = (it.kind === 'o' || it.kind === 'q') ? it.title : it.code + ' · ' + it.title;
+  var head = '<header class="card" style="padding:26px 28px;display:flex;flex-direction:column;gap:12px"><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><span class="kind" style="background:' + km[1] + ';color:' + km[2] + '">' + esc(km[0]) + '</span><span style="font-size:13.5px;color:var(--muted)">' + esc(it.meta) + '</span></div><h2 class="serif" style="margin:0;font-size:clamp(24px,2.8vw,32px);line-height:1.4">' + esc(title) + '</h2>';
+  if (it.kind === 'w') head += '<div class="warn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7A4F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:1px"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg><div><strong>ใบงานนี้ไม่มีเฉลย</strong><br>คิดและเขียนด้วยคำของตัวเอง/ของกลุ่ม คำตอบบันทึกอัตโนมัติในเครื่องนี้ ทำเสร็จแล้วกด “ส่งใบงานให้ครู” ท้ายหน้า</div></div>';
+  if (it.intro) head += '<p style="margin:0;font-size:15.5px;line-height:1.75;color:#3C4150">' + esc(it.intro) + '</p>';
+  if (it.perSource) head += '<div class="noprint" style="display:flex;flex-direction:column;gap:8px;padding-top:4px"><span style="font-size:13px;font-weight:600;color:var(--muted)">ใบงานชุดนี้ใช้ซ้ำทุกแหล่ง เลือกแหล่งที่กำลังทำ</span><div class="seg-wrap" role="group" aria-label="เลือกแหล่ง">' + C.SRC.map(function (n, k) { return '<button type="button" class="seg' + (k === S.src ? ' on' : '') + '" data-act="src" data-k="' + k + '" aria-pressed="' + (k === S.src) + '">แหล่งที่ ' + (k + 1) + ' · ' + esc(n) + '</button>'; }).join('') + '</div></div>';
+  head += '</header>';
+
+  var body = it.kind === 'q' ? quizHTML(u, it) : '<div class="card content">' + it.blocks.map(function (b, bi) { return blockHTML(b, bi, prefix); }).join('') + '</div>';
+  if (it.kind === 'w') {
+    var key = 'work-' + prefix;
+    body += '<div class="card sendbar noprint"><div style="display:flex;flex-direction:column;gap:2px">' + sendStatus(key, 'ใบงาน') + (profileOk() ? '<span class="status">ผู้ส่ง: ' + esc(S.student.name) + ' · ' + esc(S.student.room) + ' เลขที่ ' + esc(S.student.no) + (S.student.group ? ' · ' + esc(S.student.group) : '') + '</span>' : '') + '</div><div style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="btn btn-ghost" data-act="print">พิมพ์ / บันทึก PDF</button><button type="button" class="btn btn-pri" data-act="sendwork">' + (S.sent[key] ? 'ส่งฉบับแก้ไขอีกครั้ง' : 'ส่งใบงานให้ครู') + '</button></div></div>';
+  }
+
+  var prev = r.ii > 0 ? link(r.ui, r.ii - 1) : (r.ui > 0 ? link(r.ui - 1, C.units[r.ui - 1].items.length - 1) : '');
+  var last = r.ii >= items.length - 1;
+  var nextLabel = !last ? 'ถัดไป: ' + items[r.ii + 1].code : (r.ui < C.units.length - 1 ? 'ไปหน่วยที่ ' + (r.ui + 2) : 'กลับหน้าแรก');
+  var dn = !!S.done[it.id];
+  var nav = '<div class="noprint" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding-top:4px">' +
+    (prev ? '<a class="btn btn-ghost" href="' + prev + '">' + ICON_BACK + 'ก่อนหน้า</a>' : '<button type="button" class="btn btn-ghost" disabled>' + ICON_BACK + 'ก่อนหน้า</button>') +
+    (it.kind !== 'q' ? '<button type="button" class="btn ' + (dn ? 'btn-ok' : 'btn-ghost') + '" data-act="mark">' + (dn ? 'เรียนแล้ว ✓' : (it.kind === 'w' ? 'บันทึกว่าทำใบงานแล้ว' : 'ทำเครื่องหมายว่าเรียนแล้ว')) + '</button>' : '') +
+    '<button type="button" class="btn btn-pri" data-act="next">' + esc(nextLabel) + ICON_ARROW + '</button></div>';
+
+  var s = st.per[r.ui];
+  return '<main style="flex:1">' +
+    '<section class="uhead"><div class="wrap" style="padding-top:32px;padding-bottom:30px;display:flex;flex-direction:column;gap:14px">' +
+    '<nav aria-label="breadcrumb" class="noprint" style="display:flex;gap:8px;align-items:center;font-size:13.5px;color:#C3C9DB"><a href="#/" style="color:var(--sun-t)">หน้าแรก</a><span aria-hidden="true">/</span><span>หน่วยที่ ' + u.no + '</span></nav>' +
+    '<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between"><div style="flex:999 1 480px;min-width:0;display:flex;flex-direction:column;gap:8px"><h1 class="serif" style="margin:0;font-size:clamp(26px,3.6vw,40px);line-height:1.35">หน่วยที่ ' + u.no + ' · ' + esc(u.title) + '</h1><p style="margin:0;font-size:16px;line-height:1.7;color:#D9DDEA;max-width:760px">' + esc(u.short) + '</p></div>' +
+    '<div style="display:flex;flex-wrap:wrap;gap:8px"><span style="font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid rgba(246,243,236,.3)">' + u.hours + ' ชั่วโมง · ' + esc(u.periods) + '</span><span style="font-size:13px;padding:6px 12px;border-radius:999px;background:var(--sun);color:var(--ink);font-weight:600">' + esc(u.weight) + '</span></div></div>' +
+    '</div><div class="jok"></div></section>' +
+    '<div class="wrap layout"><aside class="side" aria-label="บทเรียนในหน่วย"><div class="card" style="padding:16px;display:flex;flex-direction:column;gap:12px"><div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted)"><span>ความคืบหน้าหน่วยนี้</span><strong style="color:var(--ink)">' + s.pct + '%</strong></div><div class="bar"><span style="width:' + s.pct + '%;background:var(--ok)"></span></div></div>' + groups + '</aside>' +
+    '<article class="main">' + head + body + nav + '</article></div></main>';
+}
+
+function footer() {
+  return '<footer class="foot"><div class="jok-thin"></div><div class="wrap"><span>ว30252 วิทยาศาสตร์กับภูมิปัญญา · ห้องวิทยาศาสตร์พลังสิบ · โรงเรียนลองวิทยา</span><span>1.0 หน่วยกิต · 40 ชั่วโมง · 2 คาบต่อสัปดาห์</span></div></footer>';
+}
+
+function render() {
+  var r = route(), st = stats();
+  document.getElementById('app').innerHTML = header(r, st) + (r.view === 'home' ? home(st) : unitView(r, st)) + footer();
+  document.title = (r.view === 'unit' ? C.units[r.ui].items[r.ii].code + ' · หน่วยที่ ' + (r.ui + 1) + ' · ' : '') + 'ว30252 วิทยาศาสตร์กับภูมิปัญญา';
+}
+function rerender() { var y = window.scrollY; render(); window.scrollTo(0, y); }
+
+/* ---------- ส่งข้อมูลไป Google Sheets ---------- */
+function collect(it) {
+  var prefix = prefixOf(it), lines = [], filled = 0, total = 0;
+  it.blocks.forEach(function (b, bi) {
+    if (b.t === 's') lines.push('■ ' + b.tag + ' ' + b.text);
+    if (b.t === 'field') { total++; var v = (S.ans[prefix + '-f' + bi] || '').trim(); if (v) filled++; lines.push('• ' + b.label + '\n   ' + (v || '-')); }
+    if (b.t === 'table' && b.grid) b.rows.forEach(function (row, ri) {
+      var label = typeof row[0] === 'string' ? row[0] : 'แถวที่ ' + (ri + 1), parts = [];
+      row.forEach(function (c, ci) { if (c === null) { total++; var v = (S.ans[prefix + '-' + bi + '-' + ri + '-' + ci] || '').trim(); if (v) { filled++; parts.push(b.head[ci] + ': ' + v); } } });
+      if (parts.length) lines.push('• ' + label + ' — ' + parts.join(' | '));
+    });
+    if (b.t === 'check') { var n = b.items.filter(function (t, ci) { return S.chk[prefix + '-c' + bi + '-' + ci]; }).length; lines.push('• ' + b.label + ': ติ๊กแล้ว ' + n + '/' + b.items.length); }
+  });
+  return { text: lines.join('\n'), filled: filled, total: total };
+}
+function post(payload) {
+  return fetch(SCRIPT_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) })
+    .then(function (res) { return res.json(); })
+    .then(function (j) { if (!j || !j.ok) throw new Error((j && j.error) || 'ส่งไม่สำเร็จ'); return j; });
+}
+function baseInfo(u) { var p = S.student; return { name: p.name, room: p.room, no: p.no, group: p.group || '', unit: 'หน่วยที่ ' + u.no }; }
+var pendingAfterProfile = null;
+function send(key, payload, okMsg) {
+  if (!SCRIPT_URL) { toast('ครูยังไม่ได้เปิดระบบส่งงาน'); return; }
+  if (!profileOk()) { pendingAfterProfile = function () { send(key, payload(), okMsg); }; openProfile(); return; }
+  var data = typeof payload === 'function' ? payload() : payload;
+  sending[key] = true; rerender();
+  post(data).then(function (j) { S.sent[key] = Date.now(); save(); toast(okMsg + (j.attempt > 1 ? ' (ครั้งที่ ' + j.attempt + ')' : '')); })
+    .catch(function () { toast('ส่งไม่สำเร็จ ตรวจอินเทอร์เน็ตแล้วลองใหม่ คำตอบยังอยู่ครบ'); })
+    .then(function () { delete sending[key]; rerender(); });
+}
+function sendWork() {
+  var r = route(), u = C.units[r.ui], it = u.items[r.ii], key = 'work-' + prefixOf(it);
+  send(key, function () {
+    var c = collect(it), d = baseInfo(u);
+    if (!c.filled) return null;
+    d.type = 'work'; d.code = it.code; d.title = it.title; d.source = it.perSource ? 'แหล่งที่ ' + (S.src + 1) + ' ' + C.SRC[S.src] : '';
+    d.answers = c.text; d.filled = c.filled; d.total = c.total; return d;
+  }, 'ส่งใบงานถึงครูแล้ว');
+}
+function sendQuiz() {
+  var r = route(), u = C.units[r.ui], it = u.items[r.ii];
+  send('quiz-' + it.id, function () {
+    var picks = S.qa[it.id] || {}, score = 0, detail = it.qs.map(function (q, qi) { var ok = picks[qi] === q.a; if (ok) score++; return (qi + 1) + '.' + (picks[qi] !== undefined ? LET[picks[qi]] : '-') + (ok ? '✓' : '✗'); });
+    var d = baseInfo(u); d.type = 'quiz'; d.code = it.code; d.title = it.title; d.score = score; d.total = it.qs.length; d.detail = detail.join(' '); return d;
+  }, 'ส่งคะแนนถึงครูแล้ว');
+}
+
+/* ---------- ข้อมูลนักเรียน ---------- */
+var dlg = document.getElementById('prof'), form = document.getElementById('profForm');
+function openProfile() { ['name', 'room', 'no', 'group'].forEach(function (k) { form.elements[k].value = S.student[k] || ''; }); if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); }
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  ['name', 'room', 'no', 'group'].forEach(function (k) { S.student[k] = form.elements[k].value.trim(); });
+  save(); dlg.close(); rerender(); toast('บันทึกข้อมูลนักเรียนแล้ว');
+  if (pendingAfterProfile && profileOk()) { var f = pendingAfterProfile; pendingAfterProfile = null; f(); }
+});
+document.getElementById('profCancel').addEventListener('click', function () { pendingAfterProfile = null; dlg.close(); });
+
+/* ---------- events ---------- */
+document.addEventListener('input', function (e) {
+  var k = e.target.getAttribute && e.target.getAttribute('data-key');
+  if (k && e.target.tagName === 'TEXTAREA') { S.ans[k] = e.target.value; save(); }
+});
+document.addEventListener('click', function (e) {
+  var el = e.target.closest('[data-act]'); if (!el) return;
+  var act = el.getAttribute('data-act'), r = route();
+  if (act === 'scroll') return;
+  var it = r.view === 'unit' ? C.units[r.ui].items[r.ii] : null;
+  if (act === 'profile') { pendingAfterProfile = null; openProfile(); }
+  else if (act === 'chk') { var k = el.getAttribute('data-key'); S.chk[k] = !S.chk[k]; save(); rerender(); }
+  else if (act === 'src') { S.src = +el.getAttribute('data-k'); save(); rerender(); }
+  else if (act === 'mark') { S.done[it.id] = !S.done[it.id]; save(); rerender(); }
+  else if (act === 'pick') { var a = S.qa[it.id] || (S.qa[it.id] = {}); a[el.getAttribute('data-q')] = +el.getAttribute('data-o'); save(); rerender(); }
+  else if (act === 'submitquiz') {
+    S.qc[it.id] = true; delete S.sent['quiz-' + it.id]; save(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (SCRIPT_URL && profileOk()) sendQuiz();
+  }
+  else if (act === 'retry') { S.qa[it.id] = {}; S.qc[it.id] = false; save(); render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  else if (act === 'sendquiz') sendQuiz();
+  else if (act === 'sendwork') {
+    if (!collect(it).filled) { toast('ยังไม่ได้เขียนคำตอบในใบงานนี้'); return; }
+    sendWork();
+  }
+  else if (act === 'print') window.print();
+  else if (act === 'next') {
+    if (it.kind !== 'q') { S.done[it.id] = true; save(); }
+    var items = C.units[r.ui].items;
+    location.hash = r.ii < items.length - 1 ? link(r.ui, r.ii + 1) : (r.ui < C.units.length - 1 ? link(r.ui + 1, 0) : '#/');
+  }
+});
+window.addEventListener('hashchange', function () { if (location.hash === '#units') return; render(); window.scrollTo(0, 0); });
+if (location.hash === '#units') location.hash = '#/';
+render();
+</script>
+</body>
+</html>
